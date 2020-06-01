@@ -1,0 +1,44 @@
+server:
+  port: 8090
+  servlet:
+    context-path: /tmall_springboot
+
+spring:
+  #database
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/tmall_springboot?characterEncoding=UTF-8
+    username: root
+    password: admin
+
+  #设置jpa
+  jpa:
+    hibernate:
+      ddl-auto: none
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    #显示 hibernate运行的 sql 语句
+    show-sql: true
+    open-in-view: false
+
+  #设置thymeleaf
+  thymeleaf:
+    cache: false
+    encoding: UTF-8
+    mode: LEGACYHTML5
+    servlet:
+      content-type: text/html
+
+  # 设置文件上传大小
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+  main:
+    allow-bean-definition-overriding: true
+
+  # restartedMain] o.s.b.d.a.OptionalLiveReloadServer : Unable to start LiveReload server；
+  devtools:
+    livereload:
+      port: 35730

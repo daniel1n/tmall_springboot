@@ -1,0 +1,27 @@
+
+U	java:S899d";Do something with the "boolean" value returned by "delete".(²Œ­ûÿÿÿÿ
+U	java:S899k";Do something with the "boolean" value returned by "delete".(Šýý¥ùÿÿÿÿ
+f	java:S117L"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šî¦
+f	java:S117K"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘…úî
+f	java:S117i"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šî¦
+‚
+java:S1130"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(’¶‡Î
+U	java:S899j";Do something with the "boolean" value returned by "delete".(¬‹Ýüÿÿÿÿ
+f	java:S117g"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’’Ó
+f	java:S117h"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘…úî
+i
+java:S4042j"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(¬‹Ýüÿÿÿÿ
+i
+java:S4042k"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(Šýý¥ùÿÿÿÿ
+k	java:S117I"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÛêÕ¡ûÿÿÿÿ
+`	java:S112W"FDefine and throw a dedicated exception instead of using a generic one.(’Ã®þÿÿÿÿ
+i
+java:S4042d"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(²Œ­ûÿÿÿÿ
+[	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(’¶‡Î
+‡
+java:S1130W"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(’Ã®þÿÿÿÿ
+[	java:S112."FDefine and throw a dedicated exception instead of using a generic one.(Ä‰È
+f	java:S117J"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’’Ó
+k	java:S117f"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÛêÕ¡ûÿÿÿÿ
+>
+java:S1148E"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ

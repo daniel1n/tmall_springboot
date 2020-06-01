@@ -1,0 +1,20 @@
+
+[	java:S1127"FDefine and throw a dedicated exception instead of using a generic one.(ğ ó¢
+V
+java:S46847"@Replace this persistent entity with a simple POJO or DTO object.(ğ ó¢
+Z	java:S112)"FDefine and throw a dedicated exception instead of using a generic one.(Ä²«
+`	java:S112""FDefine and throw a dedicated exception instead of using a generic one.(›ş½Îùÿÿÿÿ
+‚
+java:S11307"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(ğ ó¢
+`	java:S1121"FDefine and throw a dedicated exception instead of using a generic one.(’Ã®şÿÿÿÿ
+U
+java:S4684)"@Replace this persistent entity with a simple POJO or DTO object.(Ä²«
+[	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(¥ˆ¯¦
+‡
+java:S1130""lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(›ş½Îùÿÿÿÿ
+‰
+java:S1130"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(¥ˆ¯¦8üœß¦.
+
+java:S1130)"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(Ä²«
+‡
+java:S11301"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(’Ã®şÿÿÿÿ
