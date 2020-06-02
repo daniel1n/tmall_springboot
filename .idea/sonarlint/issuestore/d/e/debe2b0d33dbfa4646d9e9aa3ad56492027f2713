@@ -1,6 +1,5 @@
 
-t	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(‰®ñ…úÿÿÿÿ
 ?
-java:S1214
-""Move constants to a class or enum.(åÉ·»8áÇ¹Þ¦.
-t	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ýåšáøÿÿÿÿ
+java:S1214""Move constants to a class or enum.(åÉ·»8áø²ò¦.
+{	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ýåšáøÿÿÿÿ8áø²ò¦.
+{	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(‰®ñ…úÿÿÿÿ8áø²ò¦.

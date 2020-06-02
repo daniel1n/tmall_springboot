@@ -1,5 +1,6 @@
 package com.qqlin.tmall.service;
 
+import com.qqlin.tmall.dao.entity.OrderItem;
 import com.qqlin.tmall.dao.entity.Product;
 import com.qqlin.tmall.dao.entity.ProductImage;
 import org.springframework.stereotype.Service;
@@ -27,5 +28,5 @@ public interface ProductImageService {
 
     void setFirstProductImages(List<Product> products);
 
-
+    void setFirstProductImagesOnOrderItems(List<OrderItem> orderItems);
 }

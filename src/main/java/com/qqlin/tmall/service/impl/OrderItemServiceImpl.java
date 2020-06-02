@@ -3,10 +3,15 @@ package com.qqlin.tmall.service.impl;
 import com.qqlin.tmall.dao.entity.Order;
 import com.qqlin.tmall.dao.entity.OrderItem;
 import com.qqlin.tmall.dao.entity.Product;
+import com.qqlin.tmall.dao.entity.User;
 import com.qqlin.tmall.dao.repository.OrderItemDAO;
 import com.qqlin.tmall.service.OrderItemService;
 import com.qqlin.tmall.service.ProductImageService;
+import com.qqlin.tmall.util.SpringContextUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheConfig;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -16,6 +21,7 @@ import java.util.List;
  * @since 2020-6-1
  */
 @Service
+@CacheConfig(cacheNames = "orderItems")
 public class OrderItemServiceImpl implements OrderItemService {
     @Autowired
     OrderItemDAO orderItemDAO;
@@ -30,6 +36,7 @@ public class OrderItemServiceImpl implements OrderItemService {
     }
 
     @Override
+    @CacheEvict(allEntries = true)
     public void update(OrderItem orderItem) {
         orderItemDAO.save(orderItem);
     }
@@ -37,7 +44,9 @@ public class OrderItemServiceImpl implements OrderItemService {
 
     @Override
     public void fill(Order order) {
-        List<OrderItem> orderItems = listByOrder(order);
+//        List<OrderItem> orderItems = listByOrder(order);
+        OrderItemService orderItemService = SpringContextUtil.getBean(OrderItemService.class);
+        final List<OrderItem> orderItems = orderItemService.listByOrder(order);
         float total = 0;
         int totalNumber = 0;
         for (OrderItem oi : orderItems) {
@@ -52,18 +61,21 @@ public class OrderItemServiceImpl implements OrderItemService {
     }
 
     @Override
+    @CacheEvict(allEntries = true)
     public void add(OrderItem orderItem) {
         orderItemDAO.save(orderItem);
     }
 
     @Override
+    @Cacheable(key = "'orderItems-one-'+ #p0")
     public OrderItem get(int id) {
-        return orderItemDAO.findById(id).get();
+        return orderItemDAO.findOne(id);
     }
 
     @Override
+    @CacheEvict(allEntries = true)
     public void delete(int id) {
-        orderItemDAO.deleteById(id);
+        orderItemDAO.delete(id);
     }
 
 
@@ -82,13 +94,21 @@ public class OrderItemServiceImpl implements OrderItemService {
 
 
     @Override
+    @Cacheable(key = "'orderItems-pid-'+ #p0.id")
     public List<OrderItem> listByProduct(Product product) {
         return orderItemDAO.findByProduct(product);
     }
 
     @Override
+    @Cacheable(key = "'orderItems-oid-'+ #p0.id")
     public List<OrderItem> listByOrder(Order order) {
         return orderItemDAO.findByOrderOrderByIdDesc(order);
+    }
+
+    @Override
+    @Cacheable(key = "'orderItems-uid-'+ #p0.id")
+    public List<OrderItem> listByUser(User user) {
+        return orderItemDAO.findByUserAndOrderIsNull(user);
     }
 
 

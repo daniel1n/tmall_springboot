@@ -1,15 +1,15 @@
 
-k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åŞÃÊúÿÿÿÿ
-k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§´Ûªıÿÿÿÿ
->
-java:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
->
-java:S1148%"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
->
-java:S11482"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
-P
-java:S1118	":Add a private constructor to hide the implicit public one.(Æë…
-\
-java:S2142"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€
-?
-java:S1659"$Declare "height" on a separate line.(òñĞúÿÿÿÿ
+E
+java:S1148+"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8óˆ·–§.
+F
+java:S1659"$Declare "height" on a separate line.(òñĞúÿÿÿÿ8óˆ·–§.
+E
+java:S1148:"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8óˆ·–§.
+W
+java:S1118":Add a private constructor to hide the implicit public one.(Æë…8óˆ·–§.
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åŞÃÊúÿÿÿÿ8óˆ·–§.
+c
+java:S2142"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8óˆ·–§.
+r	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(×æ¬†ıÿÿÿÿ8óˆ·–§.
+E
+java:S1148"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8óˆ·–§.

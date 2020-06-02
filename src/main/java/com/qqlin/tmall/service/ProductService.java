@@ -37,4 +37,11 @@ public interface ProductService {
     void setSaleAndReviewNumber(List<Product> products);
 
     List<Product> search(String keyword, int start, int size);
+
+    /**
+     * 初始化数据到es.
+     * 因为数据刚开始都在数据库中，不在es中，
+     * 所以刚开始查询，先看看es有没有数据，如果没有，就把数据从数据库同步到es中。
+     */
+    void initDatabase2ES();
 }

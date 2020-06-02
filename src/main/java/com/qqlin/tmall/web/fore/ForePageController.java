@@ -1,5 +1,7 @@
 package com.qqlin.tmall.web.fore;
 
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.subject.Subject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -87,9 +89,20 @@ public class ForePageController {
         return "fore/search";
     }
 
+    /**
+     * 退出需要，通过subject.logout退出
+     *
+     * @param session
+     * @return
+     */
     @GetMapping("/forelogout")
     public String logout(HttpSession session) {
-        session.removeAttribute("user");
+//        session.removeAttribute("user");
+
+        final Subject subject = SecurityUtils.getSubject();
+        if (subject.isAuthenticated()) {
+            subject.logout();
+        }
         return "redirect:home";
     }
 

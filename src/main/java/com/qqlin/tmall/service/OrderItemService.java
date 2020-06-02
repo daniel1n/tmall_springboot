@@ -3,6 +3,7 @@ package com.qqlin.tmall.service;
 import com.qqlin.tmall.dao.entity.Order;
 import com.qqlin.tmall.dao.entity.OrderItem;
 import com.qqlin.tmall.dao.entity.Product;
+import com.qqlin.tmall.dao.entity.User;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -31,5 +32,5 @@ public interface OrderItemService {
 
     List<OrderItem> listByOrder(Order order);
 
-
+    List<OrderItem> listByUser(User user);
 }

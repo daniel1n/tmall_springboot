@@ -10,7 +10,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.4.RELEASE</version>
+        <version>1.5.9.RELEASE</version>
     </parent>
     <dependencies>
         <!-- springboot web -->
@@ -47,17 +47,10 @@
             <scope>test</scope>
         </dependency>
         <!-- thymeleaf -->
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
-        <dependency>
-            <groupId>nz.net.ultraq.thymeleaf</groupId>
-            <artifactId>thymeleaf-layout-dialect</artifactId>
-            <version>2.4.1</version>
-        </dependency>
-
         <!-- elastic search -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
