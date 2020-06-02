@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="417c8339-1ebe-4595-a4b6-d18b1d088d9f" name="Default Changelist" comment="" />
+    <list default="true" id="417c8339-1ebe-4595-a4b6-d18b1d088d9f" name="Default Changelist" comment="修改更新记录">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/8/b823564d61be7b2826788dcd370fa37f19b64a45" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/8/b823564d61be7b2826788dcd370fa37f19b64a45" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/3/d395d5ac64b746a93bded2a8f95a10d388ed18e6" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/3/d395d5ac64b746a93bded2a8f95a10d388ed18e6" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/f/efd83c1c3f159028c581177413dec1a224d2680c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,6 +49,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -79,13 +88,15 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../tmall_springboot-2.3.0" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="settings.editor.selected.configurable" value="Ignore Files Support" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -171,11 +182,32 @@
       <workItem from="1591110631959" duration="135000" />
       <workItem from="1591110805408" duration="1371000" />
       <workItem from="1591116273079" duration="307000" />
+      <workItem from="1591121972803" duration="1571000" />
+      <workItem from="1591123565195" duration="1198000" />
     </task>
+    <task id="LOCAL-00001" summary="修改更新记录">
+      <created>1591122507828</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1591122507828</updated>
+    </task>
+    <task id="LOCAL-00002" summary="修改更新记录">
+      <created>1591124529848</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1591124529848</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="修改更新记录" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改更新记录" />
   </component>
   <component name="WindowStateProjectService">
     <state x="261" y="6" key="#Assign_Data_Sources" timestamp="1590945577926">
@@ -198,6 +230,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="189" y="343" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1591108701124" />
+    <state x="194" y="0" key="CommitChangelistDialog2" timestamp="1591124788244">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="194" y="0" key="CommitChangelistDialog2/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1591124788244" />
     <state x="93" y="93" width="1350" height="678" key="DiffContextDialog" timestamp="1590948535740">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -246,14 +282,18 @@
     </state>
     <state width="1485" height="361" key="GridCell.Tab.1.right/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1591112184893" />
     <state width="1485" height="387" key="GridCell.Tab.1.right/0.0.1536.864/1920.0.1536.864@1920.0.1536.864" timestamp="1590951952950" />
-    <state x="62" y="0" width="1430" height="864" key="SettingsEditor" timestamp="1591110286345">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state x="1928" y="0" width="1430" height="864" key="SettingsEditor" timestamp="1591124600153">
+      <screen x="1920" y="0" width="1536" height="864" />
     </state>
-    <state x="62" y="0" width="1430" height="864" key="SettingsEditor/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1591110286345" />
+    <state x="1928" y="0" width="1430" height="864" key="SettingsEditor/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1591124600153" />
     <state width="623" height="603" key="SwitcherDM" timestamp="1591064598952">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="623" height="603" key="SwitcherDM/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1591064598952" />
+    <state x="261" y="98" key="Vcs.Push.Dialog.v2" timestamp="1591123098038">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="261" y="98" key="Vcs.Push.Dialog.v2/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1591123098038" />
     <state x="93" y="93" width="1350" height="678" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1590948535740">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
