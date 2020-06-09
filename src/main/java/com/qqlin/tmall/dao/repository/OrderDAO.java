@@ -10,5 +10,13 @@ import java.util.List;
  * @author qingq
  */
 public interface OrderDAO extends JpaRepository<Order, Integer> {
-    public List<Order> findByUserAndStatusNotOrderByIdDesc(User user, String statis);
+
+    /**
+     * 根据用户和订单状态，查询订单
+     *
+     * @param user   用户
+     * @param status 订单状态
+     * @return 返回订单集合
+     */
+    List<Order> findByUserAndStatusNotOrderByIdDesc(User user, String status);
 }

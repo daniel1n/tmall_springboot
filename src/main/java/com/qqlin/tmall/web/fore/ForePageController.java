@@ -7,6 +7,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import javax.servlet.http.HttpSession;
 
+/**
+ * @author qqlin
+ */
 @Controller
 public class ForePageController {
     @GetMapping(value = "/")
@@ -90,14 +93,15 @@ public class ForePageController {
     }
 
     /**
-     * 退出需要，通过subject.logout退出
+     * 退出登录
+     * 需要，通过subject.logout退出
      *
      * @param session
      * @return
      */
     @GetMapping("/forelogout")
     public String logout(HttpSession session) {
-//        session.removeAttribute("user");
+        // session.removeAttribute("user");
 
         final Subject subject = SecurityUtils.getSubject();
         if (subject.isAuthenticated()) {

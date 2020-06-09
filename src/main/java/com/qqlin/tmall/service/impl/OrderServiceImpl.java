@@ -31,13 +31,13 @@ import java.util.List;
 public class OrderServiceImpl implements OrderService {
 
     @Autowired
-    OrderDAO orderDAO;
+    private OrderDAO orderDAO;
     @Autowired
-    OrderItemService orderItemService;
+    private OrderItemService orderItemService;
 
     @Override
     @Cacheable(key = "'orders-page-'+#p0+ '-' + #p1")
-    public Page4Navigator<Order> list(int start, int size, int navigatePages) {
+    public Page4Navigator list(int start, int size, int navigatePages) {
         Sort sort = new Sort(Sort.Direction.DESC, "id");
         Pageable pageable = new PageRequest(start, size, sort);
         Page pageFromJPA = orderDAO.findAll(pageable);
@@ -74,22 +74,23 @@ public class OrderServiceImpl implements OrderService {
     @Override
     @CacheEvict(allEntries = true)
     @Transactional(propagation = Propagation.REQUIRED, rollbackForClassName = "Exception")
-    public float add(Order order, List<OrderItem> ois) {
+    public float add(Order order, List<OrderItem> orderItems) {
         float total = 0;
         add(order);
 
         /**
-         * 故意抛出异常代码用来模拟当增加订单后出现异常，观察事务管理是否预期发生。
+         * 故意抛出异常代码用来模拟当增加订单后出现异常，
+         * 观察事务管理是否预期发生。
          * （需要把false修改为true才能观察到）
          */
         if (false) {
             throw new RuntimeException();
         }
 
-        for (OrderItem oi : ois) {
-            oi.setOrder(order);
-            orderItemService.update(oi);
-            total += oi.getProduct().getPromotePrice() * oi.getNumber();
+        for (OrderItem orderItem : orderItems) {
+            orderItem.setOrder(order);
+            orderItemService.update(orderItem);
+            total += orderItem.getProduct().getPromotePrice() * orderItem.getNumber();
         }
         return total;
     }
@@ -103,7 +104,7 @@ public class OrderServiceImpl implements OrderService {
     @Override
     @Cacheable(key = "'orders-uid-'+ #p0.id")
     public List<Order> listByUserAndNotDeleted(User user) {
-        return orderDAO.findByUserAndStatusNotOrderByIdDesc(user, OrderService.delete);
+        return orderDAO.findByUserAndStatusNotOrderByIdDesc(user, OrderService.DELETE);
     }
 
     @Override
@@ -115,7 +116,7 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public void cacl(Order order) {
+    public void calculation(Order order) {
         List<OrderItem> orderItems = order.getOrderItems();
         float total = 0;
         for (OrderItem orderItem : orderItems) {

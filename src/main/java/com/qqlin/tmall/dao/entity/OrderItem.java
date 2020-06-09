@@ -4,10 +4,14 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 
+/**
+ * @author qqlin
+ */
 @Entity
 @Table(name = "orderItem")
 @JsonIgnoreProperties({"handler", "hibernateLazyInitializer"})
 public class OrderItem {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -15,7 +19,6 @@ public class OrderItem {
 
     @ManyToOne
     @JoinColumn(name = "pid")
-
     private Product product;
 
     @ManyToOne
@@ -24,9 +27,7 @@ public class OrderItem {
 
     @ManyToOne
     @JoinColumn(name = "uid")
-
     private User user;
-
 
     private int number;
 

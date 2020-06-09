@@ -175,3 +175,6 @@ q
 Asrc/main/java/com/qqlin/tmall/dao/elasticsearch/ProductESDAO.java,0\1\01a5580277329a9aa6d41277053b26e7507bed10
 ?
 更新记录.md,6\e\6e85469ae14f808a83ec4e3ba773b929971cd098
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302

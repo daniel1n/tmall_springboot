@@ -1,20 +1,20 @@
 
+‡
+java:S1130#"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(§–Ş“ÿÿÿÿÿ
+‡
+java:S1130)"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(’Ã®şÿÿÿÿ
+‡
+java:S1130"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(ÀĞØ‹şÿÿÿÿ
+`	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(ÀĞØ‹şÿÿÿÿ
+`	java:S112)"FDefine and throw a dedicated exception instead of using a generic one.(’Ã®şÿÿÿÿ
 [
-java:S4684+"@Replace this persistent entity with a simple POJO or DTO object.(ÙñĞ¿úÿÿÿÿ
-‚
-java:S1130"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(Ñƒ
-`	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(£úáõùÿÿÿÿ
+java:S4684#"@Replace this persistent entity with a simple POJO or DTO object.(§–Ş“ÿÿÿÿÿ
 ‡
-java:S1130%"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(’Ã®şÿÿÿÿ
-`	java:S112%"FDefine and throw a dedicated exception instead of using a generic one.(’Ã®şÿÿÿÿ
-‡
-java:S1130"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(£úáõùÿÿÿÿ
+java:S1130/"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(ÙñĞ¿úÿÿÿÿ
+`	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(£úáõùÿÿÿÿ
 [
-java:S4684"@Replace this persistent entity with a simple POJO or DTO object.(§–Ş“ÿÿÿÿÿ
-[	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ñƒ
-`	java:S112+"FDefine and throw a dedicated exception instead of using a generic one.(ÙñĞ¿úÿÿÿÿ
+java:S4684/"@Replace this persistent entity with a simple POJO or DTO object.(ÙñĞ¿úÿÿÿÿ
 ‡
-java:S1130+"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(ÙñĞ¿úÿÿÿÿ
-`	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(§–Ş“ÿÿÿÿÿ
-‡
-java:S1130"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(§–Ş“ÿÿÿÿÿ
+java:S1130"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(£úáõùÿÿÿÿ
+`	java:S112#"FDefine and throw a dedicated exception instead of using a generic one.(§–Ş“ÿÿÿÿÿ
+`	java:S112/"FDefine and throw a dedicated exception instead of using a generic one.(ÙñĞ¿úÿÿÿÿ

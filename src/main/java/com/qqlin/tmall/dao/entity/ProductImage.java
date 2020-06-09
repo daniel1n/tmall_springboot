@@ -5,6 +5,9 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 
+/**
+ * @author qqlin
+ */
 @Entity
 @Table(name = "productImage")
 @JsonIgnoreProperties({"handler", "hibernateLazyInitializer"})
@@ -14,7 +17,6 @@ public class ProductImage {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
-
 
     @ManyToOne
     @JoinColumn(name = "pid")

@@ -11,12 +11,16 @@ import org.springframework.web.bind.annotation.*;
 import java.io.IOException;
 import java.util.Date;
 
+/**
+ * @author qqlin
+ */
 @RestController
 public class OrderController {
+
     @Autowired
-    OrderService orderService;
+    private OrderService orderService;
     @Autowired
-    OrderItemService orderItemService;
+    private OrderItemService orderItemService;
 
     @GetMapping("/orders")
     public Page4Navigator<Order> list(@RequestParam(value = "start", defaultValue = "0") int start, @RequestParam(value = "size", defaultValue = "5") int size) throws Exception {
@@ -31,7 +35,7 @@ public class OrderController {
     public Object deliveryOrder(@PathVariable int oid) throws IOException {
         Order o = orderService.get(oid);
         o.setDeliveryDate(new Date());
-        o.setStatus(OrderService.waitConfirm);
+        o.setStatus(OrderService.WAIT_CONFIRM);
         orderService.update(o);
         return Result.success();
     }

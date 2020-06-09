@@ -22,9 +22,9 @@ import java.util.List;
 public class ReviewServiceImpl implements ReviewService {
 
     @Autowired
-    ReviewDAO reviewDAO;
+    private ReviewDAO reviewDAO;
     @Autowired
-    ProductService productService;
+    private ProductService productService;
 
     @Override
     @CacheEvict(allEntries = true)

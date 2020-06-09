@@ -23,40 +23,47 @@ import java.util.*;
  * @author qingq
  */
 @RestController
-public class ForeRESTController {
-    @Autowired
-    CategoryService categoryService;
-    @Autowired
-    ProductService productService;
-    @Autowired
-    UserService userService;
-    @Autowired
-    ProductImageService productImageService;
-    @Autowired
-    PropertyValueService propertyValueService;
-    @Autowired
-    OrderItemService orderItemService;
-    @Autowired
-    ReviewService reviewService;
-    @Autowired
-    OrderService orderService;
+public class ForeRestController {
 
+    @Autowired
+    private CategoryService categoryService;
+    @Autowired
+    private ProductService productService;
+    @Autowired
+    private UserService userService;
+    @Autowired
+    private ProductImageService productImageService;
+    @Autowired
+    private PropertyValueService propertyValueService;
+    @Autowired
+    private OrderItemService orderItemService;
+    @Autowired
+    private ReviewService reviewService;
+    @Autowired
+    private OrderService orderService;
 
+    /**
+     * 提供主页显示
+     * 将分类信息填充到分类中
+     *
+     * @return 已填充的分类
+     */
     @GetMapping("/forehome")
     public Object home() {
-        List<Category> cs = categoryService.list();
-        productService.fill(cs);
-        productService.fillByRow(cs);
-        categoryService.removeCategoryFromProduct(cs);
+        List<Category> categories = categoryService.list();
+        productService.fill(categories);
+        productService.fillByRow(categories);
+        categoryService.removeCategoryFromProduct(categories);
 
-        return cs;
+        return categories;
     }
 
     /**
-     * 注册用户功能，添加了Shiro的加密支持
+     * 注册用户功能
+     * 添加了Shiro的加密支持
      *
-     * @param user
-     * @return
+     * @param user 用户
+     * @return result success
      */
     @PostMapping("/foreregister")
     public Object register(@RequestBody User user) {
@@ -90,11 +97,12 @@ public class ForeRESTController {
     }
 
     /**
+     * 登录模块
      * 登录时，也需要Shiro的方式来进行校验
      *
-     * @param userParam
-     * @param session
-     * @return
+     * @param userParam 用户
+     * @param session   会话
+     * @return 返回登录的结果
      */
     @PostMapping("/forelogin")
     public Object login(@RequestBody User userParam, HttpSession session) {
@@ -126,6 +134,12 @@ public class ForeRESTController {
         }
     }
 
+    /**
+     * 产品显示的详情页面
+     *
+     * @param pid 产品的id
+     * @return 填充产品信息，并返回result.success
+     */
     @GetMapping("/foreproduct/{pid}")
     public Object product(@PathVariable("pid") int pid) {
         Product product = productService.get(pid);
@@ -135,25 +149,25 @@ public class ForeRESTController {
         product.setProductSingleImages(productSingleImages);
         product.setProductDetailImages(productDetailImages);
 
-        List<PropertyValue> pvs = propertyValueService.list(product);
+        List<PropertyValue> propertyValues = propertyValueService.list(product);
         List<Review> reviews = reviewService.list(product);
         productService.setSaleAndReviewNumber(product);
         productImageService.setFirstProductImage(product);
 
-
         Map<String, Object> map = new HashMap<>();
         map.put("product", product);
-        map.put("pvs", pvs);
+        map.put("propertyValues", propertyValues);
         map.put("reviews", reviews);
 
         return Result.success(map);
     }
 
     /**
-     * 在产品页面点击立即购买或者加入购物车的时候，需要判断是否登录，同样改为Shiro 方式
+     * 在产品页面点击立即购买或者加入购物车的时候，
+     * 需要判断是否登录，同样改为Shiro 方式
      *
-     * @param session
-     * @return
+     * @param session 会话
+     * @return 返回result.success或者result.fail
      */
     @GetMapping("/forecheckLogin")
     public Object checkLogin(HttpSession session) {
@@ -161,12 +175,18 @@ public class ForeRESTController {
 //        if (null != user) {
         Subject subject = SecurityUtils.getSubject();
         if (subject.isAuthenticated()) {
-
             return Result.success();
         }
         return Result.fail("未登录");
     }
 
+    /**
+     * 分类的详情显示页
+     *
+     * @param cid  分类的id
+     * @param sort 排序
+     * @return 返回填充了产品，并排序的分类
+     */
     @GetMapping("/forecategory/{cid}")
     public Object category(@PathVariable("cid") int cid, String sort) {
         Category category = categoryService.get(cid);
@@ -200,6 +220,13 @@ public class ForeRESTController {
         return category;
     }
 
+    /**
+     * 搜索页面的功能
+     * 使用ElasticSearch实现
+     *
+     * @param keyword 关键字
+     * @return 返回多个产品
+     */
     @PostMapping("foresearch")
     public Object search(String keyword) {
         if (null == keyword) {
@@ -211,6 +238,14 @@ public class ForeRESTController {
         return products;
     }
 
+    /**
+     * 立即购买
+     *
+     * @param pid     产品id
+     * @param num     购买的数量
+     * @param session 会话
+     * @return 返回已购买或者添加到购物车
+     */
     @GetMapping("/forebuyone")
     public Object buyOne(int pid, int num, HttpSession session) {
         return buyOneAndAddCart(pid, num, session);
@@ -246,6 +281,13 @@ public class ForeRESTController {
         return orderItemId;
     }
 
+    /**
+     * 结算页面
+     *
+     * @param oiid    订单项的id
+     * @param session 会话
+     * @return 返回result.success
+     */
     @GetMapping("forebuy")
     public Object buy(String[] oiid, HttpSession session) {
         List<OrderItem> orderItems = new ArrayList<>();
@@ -268,12 +310,26 @@ public class ForeRESTController {
         return Result.success(map);
     }
 
+    /**
+     * 加入购物车
+     *
+     * @param pid     产品的id
+     * @param num     产品的数量
+     * @param session 会话
+     * @return 返回添加成功
+     */
     @GetMapping("foreaddCart")
     public Object addCart(int pid, int num, HttpSession session) {
         buyOneAndAddCart(pid, num, session);
         return Result.success();
     }
 
+    /**
+     * 购物车页面
+     *
+     * @param session 会话
+     * @return 返回购物车的订单项
+     */
     @GetMapping("forecart")
     public Object cart(HttpSession session) {
         User user = (User) session.getAttribute("user");
@@ -282,6 +338,14 @@ public class ForeRESTController {
         return ois;
     }
 
+    /**
+     * 调整购物车中的订单数量
+     *
+     * @param session 会话
+     * @param pid     产品id
+     * @param num     产品数量
+     * @return 返回result.success
+     */
     @GetMapping("forechangeOrderItem")
     public Object changeOrderItem(HttpSession session, int pid, int num) {
         User user = (User) session.getAttribute("user");
@@ -300,6 +364,13 @@ public class ForeRESTController {
         return Result.success();
     }
 
+    /**
+     * 删除购物车的订单项
+     *
+     * @param session 会话
+     * @param oiid    订单项的id
+     * @return 返回删除成功
+     */
     @GetMapping("foredeleteOrderItem")
     public Object deleteOrderItem(HttpSession session, int oiid) {
         User user = (User) session.getAttribute("user");
@@ -310,6 +381,13 @@ public class ForeRESTController {
         return Result.success();
     }
 
+    /**
+     * 生成订单
+     *
+     * @param order   订单
+     * @param session 会话
+     * @return 订单生成成功
+     */
     @PostMapping("forecreateOrder")
     public Object createOrder(@RequestBody Order order, HttpSession session) {
         User user = (User) session.getAttribute("user");
@@ -321,7 +399,7 @@ public class ForeRESTController {
         order.setOrderCode(orderCode);
         order.setCreateDate(new Date());
         order.setUser(user);
-        order.setStatus(OrderService.waitPay);
+        order.setStatus(OrderService.WAIT_PAY);
         List<OrderItem> ois = (List<OrderItem>) session.getAttribute("ois");
 
         float total = orderService.add(order, ois);
@@ -333,15 +411,27 @@ public class ForeRESTController {
         return Result.success(map);
     }
 
+    /**
+     * 支付页面
+     *
+     * @param oid 订单项的id
+     * @return 返回已支付的订单
+     */
     @GetMapping("forepayed")
     public Object payed(int oid) {
         Order order = orderService.get(oid);
-        order.setStatus(OrderService.waitDelivery);
+        order.setStatus(OrderService.WAIT_DELIVERY);
         order.setPayDate(new Date());
         orderService.update(order);
         return order;
     }
 
+    /**
+     * 我的订单页面
+     *
+     * @param session 会话
+     * @return 返回我的订单
+     */
     @GetMapping("forebought")
     public Object bought(HttpSession session) {
         User user = (User) session.getAttribute("user");
@@ -354,32 +444,56 @@ public class ForeRESTController {
 
     }
 
+    /**
+     * 确认收货的页面
+     *
+     * @param oid 订单的id
+     * @return 返回订单对象
+     */
     @GetMapping("foreconfirmPay")
     public Object confirmPay(int oid) {
         Order order = orderService.get(oid);
         orderItemService.fill(order);
-        orderService.cacl(order);
+        orderService.calculation(order);
         orderService.removeOrderFromOrderItem(order);
         return order;
     }
 
+    /**
+     * 确认收货后的页面
+     *
+     * @param oid 订单的id
+     * @return 返回操作成功
+     */
     @GetMapping("foreorderConfirmed")
     public Object orderConfirmed(int oid) {
         Order order = orderService.get(oid);
-        order.setStatus(OrderService.waitReview);
+        order.setStatus(OrderService.WAIT_REVIEW);
         order.setConfirmDate(new Date());
         orderService.update(order);
         return Result.success();
     }
 
+    /**
+     * 删除订单
+     *
+     * @param oid 订单的id
+     * @return 操作成功
+     */
     @PutMapping("/foredeleteOrder")
     public Object deleteOrder(int oid) {
         Order order = orderService.get(oid);
-        order.setStatus(OrderService.delete);
+        order.setStatus(OrderService.DELETE);
         orderService.update(order);
         return Result.success();
     }
 
+    /**
+     * 填写评论
+     *
+     * @param oid 订单的id
+     * @return 填写成功
+     */
     @GetMapping("forereview")
     public Object review(int oid) {
         Order order = orderService.get(oid);
@@ -397,10 +511,19 @@ public class ForeRESTController {
         return Result.success(map);
     }
 
+    /**
+     * 订单提交
+     *
+     * @param session 会话
+     * @param oid     订单id
+     * @param pid     产品id
+     * @param content 评论正文
+     * @return 返回提交成功
+     */
     @PostMapping("foredoreview")
     public Object doreview(HttpSession session, int oid, int pid, String content) {
         Order order = orderService.get(oid);
-        order.setStatus(OrderService.finish);
+        order.setStatus(OrderService.FINISH);
         orderService.update(order);
 
         Product product = productService.get(pid);

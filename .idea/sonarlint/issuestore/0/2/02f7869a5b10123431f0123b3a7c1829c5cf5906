@@ -1,13 +1,13 @@
 
-p
-java:S1104"UMake FAIL_CODE a static final constant or non-public and provide accessors if needed.(·Š‰ºþÿÿÿÿ
-H
-java:S1444"2Make this "public static SUCCESS_CODE" field final(Ë€½¬
-o
-java:S3008"TRename this field "FAIL_CODE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·Š‰ºþÿÿÿÿ
 J
-java:S1444"/Make this "public static FAIL_CODE" field final(·Š‰ºþÿÿÿÿ
-m
-java:S3008"WRename this field "SUCCESS_CODE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ë€½¬
+java:S1444"/Make this "public static FAIL_CODE" field final(·Š‰ºþÿÿÿÿ
+H
+java:S1444"2Make this "public static SUCCESS_CODE" field final(Ë€½¬
+p
+java:S1104"UMake FAIL_CODE a static final constant or non-public and provide accessors if needed.(·Š‰ºþÿÿÿÿ
 n
-java:S1104"XMake SUCCESS_CODE a static final constant or non-public and provide accessors if needed.(Ë€½¬
+java:S1104"XMake SUCCESS_CODE a static final constant or non-public and provide accessors if needed.(Ë€½¬
+m
+java:S3008"WRename this field "SUCCESS_CODE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ë€½¬
+o
+java:S3008"TRename this field "FAIL_CODE" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(·Š‰ºþÿÿÿÿ

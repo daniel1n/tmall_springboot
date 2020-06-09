@@ -9,19 +9,22 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * @author qqlin
+ */
 @RestController
 public class PropertyValueController {
+
     @Autowired
-    PropertyValueService propertyValueService;
+    private PropertyValueService propertyValueService;
     @Autowired
-    ProductService productService;
+    private ProductService productService;
 
     @GetMapping("/products/{pid}/propertyValues")
     public List<PropertyValue> list(@PathVariable("pid") int pid) throws Exception {
         Product product = productService.get(pid);
         propertyValueService.init(product);
-        List<PropertyValue> propertyValues = propertyValueService.list(product);
-        return propertyValues;
+        return propertyValueService.list(product);
     }
 
     @PutMapping("/propertyValues")
@@ -29,7 +32,6 @@ public class PropertyValueController {
         propertyValueService.update(bean);
         return bean;
     }
-
 
 }
 

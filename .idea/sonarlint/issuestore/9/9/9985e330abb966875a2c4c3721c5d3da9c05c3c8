@@ -1,19 +1,10 @@
 
-`	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(«Ê†ùÿÿÿÿ
-‡
-java:S11300"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(’Ã®şÿÿÿÿ
 [
-java:S4684"@Replace this persistent entity with a simple POJO or DTO object.(«Ê†ùÿÿÿÿ
-‡
-java:S11309"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(Ò¯òùÿÿÿÿ
-[
-java:S4684?"@Replace this persistent entity with a simple POJO or DTO object.(Ùü¯Íÿÿÿÿÿ
-‡
-java:S1130"lRemove the declaration of thrown exception 'java.lang.Exception', as it cannot be thrown from method's body.(ğìØªÿÿÿÿÿ
+java:S4684!"@Replace this persistent entity with a simple POJO or DTO object.(«Ê†ùÿÿÿÿ
 i
-java:S40424"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(²Œ­ûÿÿÿÿ
-U	java:S8994";Do something with the "boolean" value returned by "delete".(²Œ­ûÿÿÿÿ
-`	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(ğìØªÿÿÿÿÿ
-`	java:S1129"FDefine and throw a dedicated exception instead of using a generic one.(Ò¯òùÿÿÿÿ
-`	java:S1120"FDefine and throw a dedicated exception instead of using a generic one.(’Ã®şÿÿÿÿ
-`	java:S112?"FDefine and throw a dedicated exception instead of using a generic one.(Ùü¯Íÿÿÿÿÿ
+java:S4042-"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(²Œ­ûÿÿÿÿ
+[
+java:S46847"@Replace this persistent entity with a simple POJO or DTO object.(Ùü¯Íÿÿÿÿÿ
+U	java:S899-";Do something with the "boolean" value returned by "delete".(²Œ­ûÿÿÿÿ
+`	java:S112!"FDefine and throw a dedicated exception instead of using a generic one.(«Ê†ùÿÿÿÿ
+`	java:S1127"FDefine and throw a dedicated exception instead of using a generic one.(Ùü¯Íÿÿÿÿÿ

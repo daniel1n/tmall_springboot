@@ -3,6 +3,9 @@ package com.qqlin.tmall.web.admin;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
+/**
+ * @author qqlin
+ */
 @Controller
 public class AdminPageController {
     @GetMapping(value = "/admin")

@@ -6,6 +6,9 @@ import com.qqlin.tmall.dao.entity.Product;
 import java.util.Comparator;
 
 /**
+ * ProductReviewComparator 人气比较器
+ * 把 评价数量多的放前面
+ *
  * @author qqlin
  * @date 2020-5-21
  */

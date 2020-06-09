@@ -25,7 +25,7 @@ import java.util.List;
 @CacheConfig(cacheNames = "categories")
 public class CategoryServiceImpl implements CategoryService {
     @Autowired
-    CategoryDAO categoryDAO;
+    private CategoryDAO categoryDAO;
 
 
     @Override
@@ -60,8 +60,7 @@ public class CategoryServiceImpl implements CategoryService {
     @Override
     @Cacheable(key = "'categiries-one-' + #p0")
     public Category get(int id) {
-        Category c = categoryDAO.findOne(id);
-        return c;
+        return categoryDAO.findOne(id);
     }
 
     @Override
@@ -70,19 +69,9 @@ public class CategoryServiceImpl implements CategoryService {
         categoryDAO.save(bean);
     }
 
-
-    /**
-     * 这个方法的用处是删除Product对象上的 分类。
-     * 为什么要删除呢？ 因为在对分类做序列还转换为 json 的时候，
-     * 会遍历里面的 products, 然后遍历出来的产品上，又会有分类，接着就开始子子孙孙无穷溃矣地遍历了
-     * <p>
-     * 而在这里去掉，就没事了。 只要在前端业务上，没有通过产品获取分类的业务，去掉也没有关系
-     *
-     * @param cs
-     */
     @Override
-    public void removeCategoryFromProduct(List<Category> cs) {
-        for (Category category : cs) {
+    public void removeCategoryFromProduct(List<Category> categories) {
+        for (Category category : categories) {
             removeCategoryFromProduct(category);
         }
     }
@@ -99,8 +88,8 @@ public class CategoryServiceImpl implements CategoryService {
         List<List<Product>> productsByRow = category.getProductsByRow();
         if (null != productsByRow) {
             for (List<Product> ps : productsByRow) {
-                for (Product p : ps) {
-                    p.setCategory(null);
+                for (Product product : ps) {
+                    product.setCategory(null);
                 }
             }
         }

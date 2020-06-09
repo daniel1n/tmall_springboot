@@ -7,7 +7,7 @@ import java.io.File;
 import java.io.IOException;
 
 /**
- * @author qingq
+ * @author qqlin
  */
 public class ImageUtil {
 
@@ -23,8 +23,7 @@ public class ImageUtil {
             DataBuffer buffer = new DataBufferInt((int[]) pg.getPixels(), pg.getWidth() * pg.getHeight());
             WritableRaster raster =
                     Raster.createPackedRaster(buffer, width, height, width, RGB_MASKS, null);
-            BufferedImage img = new BufferedImage(RGB_OPAQUE, raster, false, null);
-            return img;
+            return new BufferedImage(RGB_OPAQUE, raster, false, null);
         } catch (InterruptedException e) {
             e.printStackTrace();
             return null;
@@ -38,6 +37,7 @@ public class ImageUtil {
             }
             Image i = ImageIO.read(srcFile);
             i = resizeImage(i, width, height);
+            assert i != null;
             ImageIO.write((RenderedImage) i, "jpg", destFile);
         } catch (IOException e) {
             e.printStackTrace();
@@ -47,7 +47,7 @@ public class ImageUtil {
     public static Image resizeImage(Image srcImage, int width, int height) {
         try {
 
-            BufferedImage buffImg = null;
+            BufferedImage buffImg;
             buffImg = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
             buffImg
                     .getGraphics()

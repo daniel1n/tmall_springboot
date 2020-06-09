@@ -4,6 +4,9 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 
+/**
+ * @author qqlin
+ */
 @Entity
 @Table(name = "user")
 @JsonIgnoreProperties({"handler", "hibernateLazyInitializer"})
@@ -14,10 +17,19 @@ public class User {
     @Column(name = "id")
     private int id;
 
-    private String password;
     private String name;
+    private String password;
+
+    /**
+     * 盐
+     * 用于用户密码的加密
+     */
     private String salt;
 
+    /**
+     * 别名
+     * 用于评论功能中的匿名
+     */
     @Transient
     private String anonymousName;
 
@@ -55,15 +67,16 @@ public class User {
     }
 
     public String getAnonymousName() {
-        if (null != anonymousName)
+        if (null != anonymousName) {
             return anonymousName;
-        if (null == name)
+        }
+        if (null == name) {
             anonymousName = null;
-        else if (name.length() <= 1)
+        } else if (name.length() <= 1) {
             anonymousName = "*";
-        else if (name.length() == 2)
+        } else if (name.length() == 2) {
             anonymousName = name.substring(0, 1) + "*";
-        else {
+        } else {
             char[] cs = name.toCharArray();
             for (int i = 1; i < cs.length - 1; i++) {
                 cs[i] = '*';

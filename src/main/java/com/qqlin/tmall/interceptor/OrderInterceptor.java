@@ -15,14 +15,17 @@ import javax.servlet.http.HttpSession;
 import java.util.List;
 
 /**
+ * 搜索栏下的分类信息
+ * 购物车数量显示
+ *
  * @author qqlin
  * @since 2020-6-1
  */
 public class OrderInterceptor implements HandlerInterceptor {
     @Autowired
-    CategoryService categoryService;
+    private CategoryService categoryService;
     @Autowired
-    OrderItemService orderItemService;
+    private OrderItemService orderItemService;
 
     @Override
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
@@ -35,16 +38,16 @@ public class OrderInterceptor implements HandlerInterceptor {
         User user = (User) session.getAttribute("user");
         int cartTotalItemNumber = 0;
         if (null != user) {
-            List<OrderItem> ois = orderItemService.listByUser(user);
-            for (OrderItem oi : ois) {
-                cartTotalItemNumber += oi.getNumber();
+            List<OrderItem> orderItems = orderItemService.listByUser(user);
+            for (OrderItem orderItem : orderItems) {
+                cartTotalItemNumber += orderItem.getNumber();
             }
         }
 
-        List<Category> cs = categoryService.list();
+        List<Category> categories = categoryService.list();
         String contextPath = httpServletRequest.getServletContext().getContextPath();
 
-        httpServletRequest.getServletContext().setAttribute("categories_below_search", cs);
+        httpServletRequest.getServletContext().setAttribute("categories_below_search", categories);
         session.setAttribute("cartTotalItemNumber", cartTotalItemNumber);
         httpServletRequest.getServletContext().setAttribute("contextPath", contextPath);
     }

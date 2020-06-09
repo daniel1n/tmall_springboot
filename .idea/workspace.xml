@@ -2,11 +2,149 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="417c8339-1ebe-4595-a4b6-d18b1d088d9f" name="Default Changelist" comment="修改更新记录">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_5_23.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_1_5_9_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/2/02f7869a5b10123431f0123b3a7c1829c5cf5906" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/2/02f7869a5b10123431f0123b3a7c1829c5cf5906" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/9/190b5bc99712c09698eb81293866306f252a6d3d" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/9/190b5bc99712c09698eb81293866306f252a6d3d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/7/278f3b83a8290e8168800ada9d0aa1d37a2ba836" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/7/278f3b83a8290e8168800ada9d0aa1d37a2ba836" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/8/385717dbf69b99d8203b914f15e1fa074e682d34" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/8/385717dbf69b99d8203b914f15e1fa074e682d34" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/4477a0101582bf22aa0d4c173f38a6ef35325972" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/4477a0101582bf22aa0d4c173f38a6ef35325972" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/a/4a8b46ee7083b057077706fcbf1498bd3b9df1c8" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/a/4a8b46ee7083b057077706fcbf1498bd3b9df1c8" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/f/4fa6c71eb4e1a6c984efbc172e8034bfd540df2c" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/f/4fa6c71eb4e1a6c984efbc172e8034bfd540df2c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/7/972ab3d2ae4f8aba9ff96f4c7e0311dfe221e38b" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/7/972ab3d2ae4f8aba9ff96f4c7e0311dfe221e38b" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/9/9985e330abb966875a2c4c3721c5d3da9c05c3c8" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/9/9985e330abb966875a2c4c3721c5d3da9c05c3c8" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/3/a3dd13edbb38a2b50bf9da2d90f30bcafd1c7932" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/3/a3dd13edbb38a2b50bf9da2d90f30bcafd1c7932" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/1/b1e196cf23b87e898e668398b7d4e20cb7f232a1" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/1/b1e196cf23b87e898e668398b7d4e20cb7f232a1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/8/b823564d61be7b2826788dcd370fa37f19b64a45" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/8/b823564d61be7b2826788dcd370fa37f19b64a45" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/3/d395d5ac64b746a93bded2a8f95a10d388ed18e6" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/3/d395d5ac64b746a93bded2a8f95a10d388ed18e6" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/f/efd83c1c3f159028c581177413dec1a224d2680c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/6/d66538ef98ec79f3913474c1d3b0c7b95feb13fc" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/6/d66538ef98ec79f3913474c1d3b0c7b95feb13fc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/a/daaff8ddefc64cf18e38a59a1ec49ec3e00ba9a7" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/a/daaff8ddefc64cf18e38a59a1ec49ec3e00ba9a7" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/d/ddee1a042db338c1461db27d473f5aeeb127d030" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/d/ddee1a042db338c1461db27d473f5aeeb127d030" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/e/debe2b0d33dbfa4646d9e9aa3ad56492027f2713" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/d/e/debe2b0d33dbfa4646d9e9aa3ad56492027f2713" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/8/e80d61887fe962800e93e236e52ef15fa100dee5" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/8/e80d61887fe962800e93e236e52ef15fa100dee5" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/comparator/ProductAllComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/comparator/ProductAllComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/comparator/ProductDateComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/comparator/ProductDateComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/comparator/ProductPriceComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/comparator/ProductPriceComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/comparator/ProductReviewComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/comparator/ProductReviewComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/comparator/ProductSaleCountComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/comparator/ProductSaleCountComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/dao/elasticsearch/ProductESDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/dao/elasticsearch/ProductElasticSearchDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/dao/entity/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/dao/entity/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/dao/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/dao/entity/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/dao/entity/OrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/dao/entity/OrderItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/dao/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/dao/entity/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/dao/entity/ProductImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/dao/entity/ProductImage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/dao/entity/Property.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/dao/entity/Property.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/dao/entity/PropertyValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/dao/entity/PropertyValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/dao/entity/Review.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/dao/entity/Review.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/dao/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/dao/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/dao/repository/CategoryDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/dao/repository/CategoryDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/dao/repository/OrderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/dao/repository/OrderDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/dao/repository/OrderItemDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/dao/repository/OrderItemDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/dao/repository/ProductDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/dao/repository/ProductDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/dao/repository/ProductImageDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/dao/repository/ProductImageDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/dao/repository/PropertyDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/dao/repository/PropertyDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/dao/repository/PropertyValueDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/dao/repository/PropertyValueDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/dao/repository/ReviewDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/dao/repository/ReviewDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/dao/repository/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/dao/repository/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/interceptor/OrderInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/interceptor/OrderInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/realm/JpaRealm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/realm/JpaRealm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/service/CategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/service/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/service/OrderItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/service/OrderItemService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/service/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/service/ProductImageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/service/ProductImageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/service/PropertyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/service/PropertyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/service/PropertyValueService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/service/PropertyValueService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/service/ReviewService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/service/ReviewService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/service/impl/CategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/service/impl/CategoryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/service/impl/OrderItemServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/service/impl/OrderItemServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/service/impl/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/service/impl/ProductImageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/service/impl/ProductImageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/service/impl/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/service/impl/PropertyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/service/impl/PropertyServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/service/impl/PropertyValueServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/service/impl/PropertyValueServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/service/impl/ReviewServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/service/impl/ReviewServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/util/ImageUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/util/ImageUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/util/Page4Navigator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/util/Page4Navigator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/util/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/util/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/util/SpringContextUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/util/SpringContextUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/web/admin/AdminPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/web/admin/AdminPageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/web/admin/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/web/admin/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/web/admin/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/web/admin/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/web/admin/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/web/admin/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/web/admin/ProductImageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/web/admin/ProductImageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/web/admin/PropertyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/web/admin/PropertyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/web/admin/PropertyValueController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/web/admin/PropertyValueController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/web/admin/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/web/admin/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/web/fore/ForePageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/web/fore/ForePageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/web/fore/ForeRESTController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/qqlin/tmall/web/fore/ForeRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/editProperty.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/editProperty.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/include/admin/adminFooter.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/include/admin/adminFooter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/include/admin/adminHeader.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/include/admin/adminHeader.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/include/admin/adminNavigator.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/include/admin/adminNavigator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/include/admin/adminPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/include/admin/adminPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/img/category/84.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/comparator/ProductAllComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/comparator/ProductAllComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/comparator/ProductDateComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/comparator/ProductDateComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/comparator/ProductPriceComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/comparator/ProductPriceComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/comparator/ProductReviewComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/comparator/ProductReviewComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/comparator/ProductSaleCountComparator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/comparator/ProductSaleCountComparator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/dao/elasticsearch/ProductESDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/dao/entity/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/dao/entity/Category.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/dao/entity/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/dao/entity/Order.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/dao/entity/OrderItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/dao/entity/OrderItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/dao/entity/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/dao/entity/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/dao/entity/ProductImage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/dao/entity/ProductImage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/dao/entity/Property.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/dao/entity/Property.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/dao/entity/PropertyValue.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/dao/entity/PropertyValue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/dao/entity/Review.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/dao/entity/Review.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/dao/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/dao/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/exception/GlobalExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/exception/GlobalExceptionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/interceptor/OrderInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/interceptor/OrderInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/realm/JpaRealm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/realm/JpaRealm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/service/CategoryService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/service/CategoryService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/service/OrderItemService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/service/OrderItemService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/service/OrderService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/service/OrderService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/service/ProductImageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/service/ProductImageService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/service/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/service/impl/CategoryServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/service/impl/CategoryServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/service/impl/OrderItemServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/service/impl/OrderItemServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/service/impl/OrderServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/service/impl/OrderServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/service/impl/ProductImageServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/service/impl/ProductImageServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/service/impl/ProductServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/service/impl/ProductServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/service/impl/PropertyServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/service/impl/PropertyServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/service/impl/PropertyValueServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/service/impl/PropertyValueServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/service/impl/ReviewServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/service/impl/ReviewServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/service/impl/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/util/ImageUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/util/ImageUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/util/Page4Navigator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/util/Page4Navigator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/util/Result.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/util/Result.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/util/SpringContextUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/util/SpringContextUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/web/admin/AdminPageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/web/admin/AdminPageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/web/admin/CategoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/web/admin/CategoryController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/web/admin/OrderController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/web/admin/OrderController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/web/admin/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/web/admin/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/web/admin/ProductImageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/web/admin/ProductImageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/web/admin/PropertyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/web/admin/PropertyController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/web/admin/PropertyValueController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/web/admin/PropertyValueController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/web/admin/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/web/admin/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/web/fore/ForePageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/web/fore/ForePageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/web/fore/ForeRESTController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/qqlin/tmall/web/fore/ForeRESTController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/editProperty.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/editProperty.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/include/admin/adminFooter.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/include/admin/adminFooter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/include/admin/adminHeader.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/include/admin/adminHeader.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/include/admin/adminNavigator.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/include/admin/adminNavigator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/include/admin/adminPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/include/admin/adminPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/tmall_springboot.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/更新记录.md" beforeDir="false" afterPath="$PROJECT_DIR$/更新记录.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +178,9 @@
     </expand>
     <select />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="tmall_springboot" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -51,6 +192,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -96,9 +238,12 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="Ignore Files Support" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.qqlin.tmall.dao.repository" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\IdeaProjects\tmall_springboot-1\src\main\resources" />
       <recent name="D:\IdeaProjects\tmall_springboot-1\src\main\java\com\qqlin\tmall" />
@@ -183,7 +328,20 @@
       <workItem from="1591110805408" duration="1371000" />
       <workItem from="1591116273079" duration="307000" />
       <workItem from="1591121972803" duration="1571000" />
-      <workItem from="1591123565195" duration="1198000" />
+      <workItem from="1591123565195" duration="1903000" />
+      <workItem from="1591167900632" duration="2744000" />
+      <workItem from="1591174227386" duration="1858000" />
+      <workItem from="1591176122337" duration="1257000" />
+      <workItem from="1591260616941" duration="2879000" />
+      <workItem from="1591336834424" duration="22528000" />
+      <workItem from="1591437530621" duration="1362000" />
+      <workItem from="1591440971827" duration="2461000" />
+      <workItem from="1591451567650" duration="1861000" />
+      <workItem from="1591457522123" duration="2934000" />
+      <workItem from="1591484662287" duration="2164000" />
+      <workItem from="1591489992057" duration="7377000" />
+      <workItem from="1591535546017" duration="7453000" />
+      <workItem from="1591584559580" duration="22779000" />
     </task>
     <task id="LOCAL-00001" summary="修改更新记录">
       <created>1591122507828</created>
@@ -204,6 +362,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="SHOW_OTHER_BRANCHES" value="true" />
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="修改更新记录" />
@@ -226,81 +395,122 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="530" y="72" key="#com.intellij.ide.util.MemberChooser/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1591109479130" />
-    <state x="189" y="343" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1591108701124">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state x="2109" y="343" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1591625813063">
+      <screen x="1920" y="0" width="1536" height="864" />
     </state>
     <state x="189" y="343" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1591108701124" />
-    <state x="194" y="0" key="CommitChangelistDialog2" timestamp="1591124788244">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state x="2109" y="343" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.864/1920.0.1536.864@1920.0.1536.864" timestamp="1591625813063" />
+    <state x="2445" y="268" width="726" height="344" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1591626088070">
+      <screen x="1920" y="0" width="1536" height="864" />
+    </state>
+    <state x="2445" y="268" width="726" height="344" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.864/1920.0.1536.864@1920.0.1536.864" timestamp="1591626088070" />
+    <state x="2097" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1591625695335">
+      <screen x="1920" y="0" width="1536" height="864" />
+    </state>
+    <state x="2097" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.864/1920.0.1536.864@1920.0.1536.864" timestamp="1591625695335" />
+    <state x="177" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.864@0.0.1536.864" timestamp="1591544280705" />
+    <state x="2112" y="0" key="CommitChangelistDialog2" timestamp="1591693954787">
+      <screen x="1920" y="0" width="1536" height="864" />
     </state>
     <state x="194" y="0" key="CommitChangelistDialog2/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1591124788244" />
+    <state x="2112" y="0" key="CommitChangelistDialog2/0.0.1536.864/1920.0.1536.864@1920.0.1536.864" timestamp="1591693954787" />
     <state x="93" y="93" width="1350" height="678" key="DiffContextDialog" timestamp="1590948535740">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="93" y="93" width="1350" height="678" key="DiffContextDialog/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1590948535740" />
-    <state x="499" y="128" key="FileChooserDialogImpl" timestamp="1591112097891">
+    <state x="499" y="128" key="FileChooserDialogImpl" timestamp="1591496272124">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="499" y="128" key="FileChooserDialogImpl/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1591112097891" />
-    <state width="1485" height="361" key="GridCell.Tab.0.bottom" timestamp="1591112184893">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1485" height="361" key="GridCell.Tab.0.bottom/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1591112184893" />
-    <state width="1485" height="387" key="GridCell.Tab.0.bottom/0.0.1536.864/1920.0.1536.864@1920.0.1536.864" timestamp="1590951952950" />
-    <state width="1485" height="361" key="GridCell.Tab.0.center" timestamp="1591112184893">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1485" height="361" key="GridCell.Tab.0.center/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1591112184893" />
-    <state width="1485" height="387" key="GridCell.Tab.0.center/0.0.1536.864/1920.0.1536.864@1920.0.1536.864" timestamp="1590951952950" />
-    <state width="1485" height="361" key="GridCell.Tab.0.left" timestamp="1591112184893">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1485" height="361" key="GridCell.Tab.0.left/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1591112184893" />
-    <state width="1485" height="387" key="GridCell.Tab.0.left/0.0.1536.864/1920.0.1536.864@1920.0.1536.864" timestamp="1590951952950" />
-    <state width="1485" height="361" key="GridCell.Tab.0.right" timestamp="1591112184893">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1485" height="361" key="GridCell.Tab.0.right/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1591112184893" />
-    <state width="1485" height="387" key="GridCell.Tab.0.right/0.0.1536.864/1920.0.1536.864@1920.0.1536.864" timestamp="1590951952950" />
-    <state width="1485" height="361" key="GridCell.Tab.1.bottom" timestamp="1591112184893">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1485" height="361" key="GridCell.Tab.1.bottom/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1591112184893" />
-    <state width="1485" height="387" key="GridCell.Tab.1.bottom/0.0.1536.864/1920.0.1536.864@1920.0.1536.864" timestamp="1590951952950" />
-    <state width="1485" height="361" key="GridCell.Tab.1.center" timestamp="1591112184893">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1485" height="361" key="GridCell.Tab.1.center/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1591112184893" />
-    <state width="1485" height="387" key="GridCell.Tab.1.center/0.0.1536.864/1920.0.1536.864@1920.0.1536.864" timestamp="1590951952950" />
-    <state width="1485" height="361" key="GridCell.Tab.1.left" timestamp="1591112184893">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1485" height="361" key="GridCell.Tab.1.left/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1591112184893" />
-    <state width="1485" height="387" key="GridCell.Tab.1.left/0.0.1536.864/1920.0.1536.864@1920.0.1536.864" timestamp="1590951952950" />
-    <state width="1485" height="361" key="GridCell.Tab.1.right" timestamp="1591112184893">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1485" height="361" key="GridCell.Tab.1.right/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1591112184893" />
-    <state width="1485" height="387" key="GridCell.Tab.1.right/0.0.1536.864/1920.0.1536.864@1920.0.1536.864" timestamp="1590951952950" />
-    <state x="1928" y="0" width="1430" height="864" key="SettingsEditor" timestamp="1591124600153">
+    <state x="499" y="128" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1591496272124" />
+    <state width="1485" height="358" key="GridCell.Tab.0.bottom" timestamp="1591687212004">
       <screen x="1920" y="0" width="1536" height="864" />
     </state>
+    <state width="1485" height="361" key="GridCell.Tab.0.bottom/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1591340351660" />
+    <state width="1485" height="358" key="GridCell.Tab.0.bottom/0.0.1536.864/1920.0.1536.864@1920.0.1536.864" timestamp="1591687212004" />
+    <state width="1485" height="359" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1591587582336" />
+    <state width="1485" height="358" key="GridCell.Tab.0.center" timestamp="1591687212004">
+      <screen x="1920" y="0" width="1536" height="864" />
+    </state>
+    <state width="1485" height="361" key="GridCell.Tab.0.center/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1591340351660" />
+    <state width="1485" height="358" key="GridCell.Tab.0.center/0.0.1536.864/1920.0.1536.864@1920.0.1536.864" timestamp="1591687212004" />
+    <state width="1485" height="359" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1591587582336" />
+    <state width="1485" height="358" key="GridCell.Tab.0.left" timestamp="1591687212004">
+      <screen x="1920" y="0" width="1536" height="864" />
+    </state>
+    <state width="1485" height="361" key="GridCell.Tab.0.left/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1591340351660" />
+    <state width="1485" height="358" key="GridCell.Tab.0.left/0.0.1536.864/1920.0.1536.864@1920.0.1536.864" timestamp="1591687212004" />
+    <state width="1485" height="359" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1591587582336" />
+    <state width="1485" height="358" key="GridCell.Tab.0.right" timestamp="1591687212004">
+      <screen x="1920" y="0" width="1536" height="864" />
+    </state>
+    <state width="1485" height="361" key="GridCell.Tab.0.right/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1591340351660" />
+    <state width="1485" height="358" key="GridCell.Tab.0.right/0.0.1536.864/1920.0.1536.864@1920.0.1536.864" timestamp="1591687212004" />
+    <state width="1485" height="359" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1591587582336" />
+    <state width="1485" height="358" key="GridCell.Tab.1.bottom" timestamp="1591687212005">
+      <screen x="1920" y="0" width="1536" height="864" />
+    </state>
+    <state width="1485" height="361" key="GridCell.Tab.1.bottom/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1591340351660" />
+    <state width="1485" height="358" key="GridCell.Tab.1.bottom/0.0.1536.864/1920.0.1536.864@1920.0.1536.864" timestamp="1591687212005" />
+    <state width="1485" height="359" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1591587582337" />
+    <state width="1485" height="358" key="GridCell.Tab.1.center" timestamp="1591687212005">
+      <screen x="1920" y="0" width="1536" height="864" />
+    </state>
+    <state width="1485" height="361" key="GridCell.Tab.1.center/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1591340351660" />
+    <state width="1485" height="358" key="GridCell.Tab.1.center/0.0.1536.864/1920.0.1536.864@1920.0.1536.864" timestamp="1591687212005" />
+    <state width="1485" height="359" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1591587582336" />
+    <state width="1485" height="358" key="GridCell.Tab.1.left" timestamp="1591687212005">
+      <screen x="1920" y="0" width="1536" height="864" />
+    </state>
+    <state width="1485" height="361" key="GridCell.Tab.1.left/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1591340351660" />
+    <state width="1485" height="358" key="GridCell.Tab.1.left/0.0.1536.864/1920.0.1536.864@1920.0.1536.864" timestamp="1591687212005" />
+    <state width="1485" height="359" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1591587582336" />
+    <state width="1485" height="358" key="GridCell.Tab.1.right" timestamp="1591687212005">
+      <screen x="1920" y="0" width="1536" height="864" />
+    </state>
+    <state width="1485" height="361" key="GridCell.Tab.1.right/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1591340351660" />
+    <state width="1485" height="358" key="GridCell.Tab.1.right/0.0.1536.864/1920.0.1536.864@1920.0.1536.864" timestamp="1591687212005" />
+    <state width="1485" height="359" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1591587582336" />
+    <state x="8" y="0" width="1430" height="864" key="SettingsEditor" timestamp="1591496196815">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
     <state x="1928" y="0" width="1430" height="864" key="SettingsEditor/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1591124600153" />
+    <state x="8" y="0" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1591496196815" />
     <state width="623" height="603" key="SwitcherDM" timestamp="1591064598952">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="623" height="603" key="SwitcherDM/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1591064598952" />
-    <state x="261" y="98" key="Vcs.Push.Dialog.v2" timestamp="1591123098038">
-      <screen x="0" y="0" width="1536" height="864" />
+    <state x="2181" y="98" key="Vcs.Push.Dialog.v2" timestamp="1591693939745">
+      <screen x="1920" y="0" width="1536" height="864" />
     </state>
-    <state x="261" y="98" key="Vcs.Push.Dialog.v2/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1591123098038" />
+    <state x="261" y="98" key="Vcs.Push.Dialog.v2/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1591125471860" />
+    <state x="2181" y="98" key="Vcs.Push.Dialog.v2/0.0.1536.864/1920.0.1536.864@1920.0.1536.864" timestamp="1591693939745" />
     <state x="93" y="93" width="1350" height="678" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1590948535740">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="93" y="93" width="1350" height="678" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1590948535740" />
-    <state x="347" y="-1" width="840" height="1034" key="search.everywhere.popup" timestamp="1591064608114">
+    <state x="158" y="19" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1591483377377">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="158" y="19" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.864@0.0.1536.864" timestamp="1591483377377" />
+    <state x="481" y="328" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1591175671291">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="481" y="328" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1591175671291" />
+    <state x="341" y="246" width="913" height="372" key="org.intellij.images.editor.actions.BackgroundImageDialog" timestamp="1591496273187">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="341" y="246" width="913" height="372" key="org.intellij.images.editor.actions.BackgroundImageDialog/0.0.1536.864@0.0.1536.864" timestamp="1591496273187" />
+    <state x="2261" y="193" key="run.anything.popup" timestamp="1591685862763">
+      <screen x="1920" y="0" width="1536" height="864" />
+    </state>
+    <state x="2261" y="193" key="run.anything.popup/0.0.1536.864/1920.0.1536.864@1920.0.1536.864" timestamp="1591685862763" />
+    <state x="341" y="193" key="run.anything.popup/0.0.1536.864@0.0.1536.864" timestamp="1591584679605" />
+    <state x="347" y="0" width="840" height="862" key="search.everywhere.popup" timestamp="1591496266489">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="347" y="-1" width="840" height="1034" key="search.everywhere.popup/0.0.1536.864/1920.0.1536.864@0.0.1536.864" timestamp="1591064608114" />
+    <state x="2267" y="0" width="840" height="862" key="search.everywhere.popup/0.0.1536.864/1920.0.1536.864@1920.0.1536.864" timestamp="1591339146406" />
+    <state x="347" y="0" width="840" height="862" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1591496266489" />
   </component>
 </project>

@@ -14,6 +14,8 @@ import org.apache.shiro.util.ByteSource;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
+ * 提供通过 JPA 进行验证的 Realm
+ *
  * @author qqlin
  * @since 2020-6-1
  */

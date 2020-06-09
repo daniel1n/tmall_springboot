@@ -4,11 +4,13 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 
+/**
+ * @author qqlin
+ */
 @Entity
 @Table(name = "property")
 @JsonIgnoreProperties({"handler", "hibernateLazyInitializer"})
 public class Property {
-
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,7 +22,6 @@ public class Property {
 
     @ManyToOne
     @JoinColumn(name = "cid")
-
     private Category category;
 
 
@@ -32,7 +33,6 @@ public class Property {
         this.id = id;
     }
 
-
     public String getName() {
         return name;
     }
@@ -40,7 +40,6 @@ public class Property {
     public void setName(String name) {
         this.name = name;
     }
-
 
     public Category getCategory() {
         return category;

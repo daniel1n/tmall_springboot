@@ -5,10 +5,14 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import javax.persistence.*;
 import java.util.Date;
 
+/**
+ * @author qqlin
+ */
 @Entity
 @Table(name = "review")
 @JsonIgnoreProperties({"handler", "hibernateLazyInitializer"})
 public class Review {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -16,12 +20,10 @@ public class Review {
 
     @ManyToOne
     @JoinColumn(name = "uid")
-
     private User user;
 
     @ManyToOne
     @JoinColumn(name = "pid")
-
     private Product product;
 
     private String content;

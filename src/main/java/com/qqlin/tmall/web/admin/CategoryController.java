@@ -14,16 +14,19 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * @author qqlin
+ */
 @RestController
 public class CategoryController {
     @Autowired
-    CategoryService categoryService;
+    private CategoryService categoryService;
 
     @GetMapping("/categories")
-    public Page4Navigator<Category> list(@RequestParam(value = "start", defaultValue = "0") int start, @RequestParam(value = "size", defaultValue = "5") int size) throws Exception {
+    public Page4Navigator<Category> list(@RequestParam(value = "start", defaultValue = "0") int start,
+                                         @RequestParam(value = "size", defaultValue = "5") int size) {
         start = start < 0 ? 0 : start;
-        Page4Navigator<Category> page = categoryService.list(start, size, 5);  //5表示导航分页最多有5个，像 [1,2,3,4,5] 这样
-        return page;
+        return categoryService.list(start, size, 5);
     }
 
     @PostMapping("/categories")
@@ -33,19 +36,9 @@ public class CategoryController {
         return bean;
     }
 
-    public void saveOrUpdateImageFile(Category bean, MultipartFile image, HttpServletRequest request)
-            throws IOException {
-        File imageFolder = new File(request.getServletContext().getRealPath("img/category"));
-        File file = new File(imageFolder, bean.getId() + ".jpg");
-        if (!file.getParentFile().exists())
-            file.getParentFile().mkdirs();
-        image.transferTo(file);
-        BufferedImage img = ImageUtil.change2jpg(file);
-        ImageIO.write(img, "jpg", file);
-    }
 
     @DeleteMapping("/categories/{id}")
-    public String delete(@PathVariable("id") int id, HttpServletRequest request) throws Exception {
+    public String delete(@PathVariable("id") int id, HttpServletRequest request) {
         categoryService.delete(id);
         File imageFolder = new File(request.getServletContext().getRealPath("img/category"));
         File file = new File(imageFolder, id + ".jpg");
@@ -54,9 +47,8 @@ public class CategoryController {
     }
 
     @GetMapping("/categories/{id}")
-    public Category get(@PathVariable("id") int id) throws Exception {
-        Category bean = categoryService.get(id);
-        return bean;
+    public Category get(@PathVariable("id") int id) {
+        return categoryService.get(id);
     }
 
     @PutMapping("/categories/{id}")
@@ -71,5 +63,17 @@ public class CategoryController {
         return bean;
     }
 
+    public void saveOrUpdateImageFile(Category bean, MultipartFile image, HttpServletRequest request)
+            throws IOException {
+        File imageFolder = new File(request.getServletContext().getRealPath("img/category"));
+        File file = new File(imageFolder, bean.getId() + ".jpg");
+        if (!file.getParentFile().exists()) {
+            file.getParentFile().mkdirs();
+        }
+        image.transferTo(file);
+        BufferedImage img = ImageUtil.change2jpg(file);
+        assert img != null;
+        ImageIO.write(img, "jpg", file);
+    }
 }
 

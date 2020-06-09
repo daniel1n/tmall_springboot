@@ -5,10 +5,12 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import javax.persistence.*;
 import java.util.List;
 
+/**
+ * @author qqlin
+ */
 @Entity
 @Table(name = "category")
 @JsonIgnoreProperties({"handler", "hibernateLazyInitializer"})
-
 public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

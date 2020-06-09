@@ -7,10 +7,14 @@ import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * @author qqlin
+ */
 @Entity
 @Table(name = "order_")
 @JsonIgnoreProperties({"handler", "hibernateLazyInitializer"})
 public class Order {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -18,9 +22,7 @@ public class Order {
 
     @ManyToOne
     @JoinColumn(name = "uid")
-
     private User user;
-
 
     private String orderCode;
     private String address;
@@ -43,32 +45,28 @@ public class Order {
     @Transient
     private String statusDesc;
 
-
-    public void setStatusDesc(String statusDesc) {
-        this.statusDesc = statusDesc;
-    }
-
     public String getStatusDesc() {
-        if (null != statusDesc)
+        if (null != statusDesc) {
             return statusDesc;
+        }
         String desc = "未知";
         switch (status) {
-            case OrderService.waitPay:
+            case OrderService.WAIT_PAY:
                 desc = "待付";
                 break;
-            case OrderService.waitDelivery:
+            case OrderService.WAIT_DELIVERY:
                 desc = "待发";
                 break;
-            case OrderService.waitConfirm:
+            case OrderService.WAIT_CONFIRM:
                 desc = "待收";
                 break;
-            case OrderService.waitReview:
+            case OrderService.WAIT_REVIEW:
                 desc = "等评";
                 break;
-            case OrderService.finish:
+            case OrderService.FINISH:
                 desc = "完成";
                 break;
-            case OrderService.delete:
+            case OrderService.DELETE:
                 desc = "刪除";
                 break;
             default:
@@ -78,6 +76,9 @@ public class Order {
         return statusDesc;
     }
 
+    public void setStatusDesc(String statusDesc) {
+        this.statusDesc = statusDesc;
+    }
 
     public int getId() {
         return id;

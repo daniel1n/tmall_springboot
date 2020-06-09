@@ -27,9 +27,9 @@ import java.util.List;
 public class PropertyServiceImpl implements PropertyService {
 
     @Autowired
-    PropertyDAO propertyDAO;
+    private PropertyDAO propertyDAO;
     @Autowired
-    CategoryService categoryService;
+    private CategoryService categoryService;
 
     @Override
     @CacheEvict(allEntries = true)
@@ -64,10 +64,7 @@ public class PropertyServiceImpl implements PropertyService {
         Pageable pageable = new PageRequest(start, size, sort);
 
         Page<Property> pageFromJPA = propertyDAO.findByCategory(category, pageable);
-
         return new Page4Navigator<>(pageFromJPA, navigatePages);
-
-
     }
 
     @Override

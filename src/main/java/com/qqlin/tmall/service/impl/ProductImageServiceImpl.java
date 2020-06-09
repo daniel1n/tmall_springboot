@@ -24,10 +24,9 @@ import java.util.List;
 public class ProductImageServiceImpl implements ProductImageService {
 
     @Autowired
-    ProductImageDAO productImageDAO;
+    private ProductImageDAO productImageDAO;
     @Autowired
-    ProductService productService;
-
+    private ProductService productService;
 
     @Override
     @CacheEvict(allEntries = true)
@@ -51,13 +50,13 @@ public class ProductImageServiceImpl implements ProductImageService {
     @Override
     @Cacheable(key = "'productImages-single-pid-'+ #p0.id")
     public List<ProductImage> listSingleProductImages(Product product) {
-        return productImageDAO.findByProductAndTypeOrderByIdDesc(product, type_single);
+        return productImageDAO.findByProductAndTypeOrderByIdDesc(product, TYPE_SINGLE);
     }
 
     @Override
     @Cacheable(key = "'productImages-detail-pid-'+ #p0.id")
     public List<ProductImage> listDetailProductImages(Product product) {
-        return productImageDAO.findByProductAndTypeOrderByIdDesc(product, type_detail);
+        return productImageDAO.findByProductAndTypeOrderByIdDesc(product, TYPE_DETAIL);
     }
 
     @Override
@@ -86,6 +85,5 @@ public class ProductImageServiceImpl implements ProductImageService {
             setFirstProductImage(orderItem.getProduct());
         }
     }
-
 
 }

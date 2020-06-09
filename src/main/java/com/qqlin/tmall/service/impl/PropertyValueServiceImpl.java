@@ -24,10 +24,9 @@ import java.util.List;
 public class PropertyValueServiceImpl implements PropertyValueService {
 
     @Autowired
-    PropertyValueDAO propertyValueDAO;
+    private PropertyValueDAO propertyValueDAO;
     @Autowired
-    PropertyService propertyService;
-
+    private PropertyService propertyService;
 
     @Override
     @CacheEvict(allEntries = true)
@@ -62,7 +61,6 @@ public class PropertyValueServiceImpl implements PropertyValueService {
     public List<PropertyValue> list(Product product) {
         return propertyValueDAO.findByProductOrderByIdDesc(product);
     }
-
 
 }
 

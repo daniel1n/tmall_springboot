@@ -23,10 +23,11 @@ import java.util.List;
 @Service
 @CacheConfig(cacheNames = "orderItems")
 public class OrderItemServiceImpl implements OrderItemService {
+
     @Autowired
-    OrderItemDAO orderItemDAO;
+    private OrderItemDAO orderItemDAO;
     @Autowired
-    ProductImageService productImageService;
+    private ProductImageService productImageService;
 
     @Override
     public void fill(List<Order> orders) {
@@ -40,7 +41,6 @@ public class OrderItemServiceImpl implements OrderItemService {
     public void update(OrderItem orderItem) {
         orderItemDAO.save(orderItem);
     }
-
 
     @Override
     public void fill(Order order) {

@@ -16,6 +16,7 @@ import java.util.List;
 @JsonIgnoreProperties({"handler", "hibernateLazyInitializer"})
 @Document(indexName = "tmall_springboot", type = "product")
 public class Product {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -156,6 +157,5 @@ public class Product {
                 + ", createDate=" + createDate + ", firstProductImage=" + firstProductImage + ", reviewCount="
                 + reviewCount + ", saleCount=" + saleCount + "]";
     }
-
 
 }

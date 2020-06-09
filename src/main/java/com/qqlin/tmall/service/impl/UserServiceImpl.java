@@ -23,8 +23,7 @@ import org.springframework.stereotype.Service;
 public class UserServiceImpl implements UserService {
 
     @Autowired
-    UserDAO userDAO;
-
+    private UserDAO userDAO;
 
     @Override
     public boolean isExist(String name) {
@@ -32,13 +31,11 @@ public class UserServiceImpl implements UserService {
         return null != user;
     }
 
-
     @Override
     @Cacheable(key = "'users-one-name-'+ #p0")
     public User getByName(String name) {
         return userDAO.findByName(name);
     }
-
 
     @Override
     @Cacheable(key = "'users-one-name-'+ #p0 +'-password-'+ #p1")

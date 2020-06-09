@@ -1,6 +1,6 @@
 package com.qqlin.tmall.service.impl;
 
-import com.qqlin.tmall.dao.elasticsearch.ProductESDAO;
+import com.qqlin.tmall.dao.elasticsearch.ProductElasticSearchDAO;
 import com.qqlin.tmall.dao.entity.Category;
 import com.qqlin.tmall.dao.entity.Product;
 import com.qqlin.tmall.dao.repository.ProductDAO;
@@ -34,31 +34,30 @@ import java.util.List;
 public class ProductServiceImpl implements ProductService {
 
     @Autowired
-    ProductDAO productDAO;
+    private ProductDAO productDAO;
     @Autowired
-    CategoryService categoryService;
+    private CategoryService categoryService;
     @Autowired
-    ProductImageService productImageService;
+    private ProductImageService productImageService;
     @Autowired
-    OrderItemService orderItemService;
+    private OrderItemService orderItemService;
     @Autowired
-    ReviewService reviewService;
+    private ReviewService reviewService;
     @Autowired
-    ProductESDAO productESDAO;
+    private ProductElasticSearchDAO productElasticSearchDAO;
 
     @Override
     @CacheEvict(allEntries = true)
-
     public void add(Product bean) {
         productDAO.save(bean);
-        productESDAO.save(bean);
+        productElasticSearchDAO.save(bean);
     }
 
     @Override
     @CacheEvict(allEntries = true)
     public void delete(int id) {
         productDAO.delete(id);
-        productESDAO.delete(id);
+        productElasticSearchDAO.delete(id);
     }
 
     @Override
@@ -71,7 +70,7 @@ public class ProductServiceImpl implements ProductService {
     @CacheEvict(allEntries = true)
     public void update(Product bean) {
         productDAO.save(bean);
-        productESDAO.save(bean);
+        productElasticSearchDAO.save(bean);
     }
 
     @Override
@@ -101,6 +100,16 @@ public class ProductServiceImpl implements ProductService {
     }
 
 
+    /**
+     * 假设一个分类恰好对应40种产品，那么这40种产品本来是放在一个集合List里。
+     * 可是，在页面上显示的时候，需要每8种产品，放在一列 为了显示的方便，
+     * 我把这40种产品，按照每8种产品方在一个集合里的方式，拆分成了5个小的集合，
+     * 这5个小的集合里的每个元素是8个产品。
+     * 这样到了页面上，显示起来就很方便了。
+     * 否则页面上的处理就会复杂不少。
+     *
+     * @param categories 多个分类
+     */
     @Override
     public void fillByRow(List<Category> categories) {
         int productNumberEachRow = 8;
@@ -152,12 +161,10 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public void initDatabase2ES() {
         Pageable pageable = new PageRequest(0, 5);
-        Page<Product> page = productESDAO.findAll(pageable);
+        Page<Product> page = productElasticSearchDAO.findAll(pageable);
         if (page.getContent().isEmpty()) {
             List<Product> products = productDAO.findAll();
-            for (Product product : products) {
-                productESDAO.save(product);
-            }
+            productElasticSearchDAO.save(products);
         }
     }
 
@@ -165,17 +172,21 @@ public class ProductServiceImpl implements ProductService {
     public List<Product> search(String keyword, int start, int size) {
         initDatabase2ES();
         FunctionScoreQueryBuilder functionScoreQueryBuilder = QueryBuilders.functionScoreQuery()
+                // 关键字查询
                 .add(QueryBuilders.matchPhrasePrefixQuery("name", keyword),
                         ScoreFunctionBuilders.weightFactorFunction(100))
+                // 设置权重分 求和模式
                 .scoreMode("sum")
+                // 设置权重分最低分
                 .setMinScore(10);
+        // 设置分页
         Sort sort = new Sort(Sort.Direction.DESC, "id");
         Pageable pageable = new PageRequest(start, size, sort);
         SearchQuery searchQuery = new NativeSearchQueryBuilder()
                 .withPageable(pageable)
                 .withQuery(functionScoreQueryBuilder).build();
 
-        Page<Product> page = productESDAO.search(searchQuery);
+        Page<Product> page = productElasticSearchDAO.search(searchQuery);
         return page.getContent();
     }
 }
