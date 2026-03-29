@@ -38,8 +38,8 @@ public class OrderServiceImpl implements OrderService {
     @Override
     @Cacheable(key = "'orders-page-'+#p0+ '-' + #p1")
     public Page4Navigator list(int start, int size, int navigatePages) {
-        Sort sort = new Sort(Sort.Direction.DESC, "id");
-        Pageable pageable = new PageRequest(start, size, sort);
+        Sort sort = Sort.by(Sort.Direction.DESC, "id");
+        Pageable pageable = PageRequest.of(start, size, sort);
         Page pageFromJPA = orderDAO.findAll(pageable);
         return new Page4Navigator<>(pageFromJPA, navigatePages);
     }
@@ -62,7 +62,7 @@ public class OrderServiceImpl implements OrderService {
     @Override
     @Cacheable(key = "'orders-one-'+ #p0")
     public Order get(int oid) {
-        return orderDAO.findOne(oid);
+        return orderDAO.findById(oid).orElse(null);
     }
 
     @Override

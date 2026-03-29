@@ -14,7 +14,7 @@ import java.util.List;
 @Entity
 @Table(name = "product")
 @JsonIgnoreProperties({"handler", "hibernateLazyInitializer"})
-@Document(indexName = "tmall_springboot", type = "product")
+@Document(indexName = "tmall_springboot")
 public class Product {
 
     @Id

@@ -38,13 +38,13 @@ public class ProductImageServiceImpl implements ProductImageService {
     @Override
     @CacheEvict(allEntries = true)
     public void delete(int id) {
-        productImageDAO.delete(id);
+        productImageDAO.deleteById(id);
     }
 
     @Override
     @Cacheable(key = "'productImages-one-'+ #p0")
     public ProductImage get(int id) {
-        return productImageDAO.findOne(id);
+        return productImageDAO.findById(id).orElse(null);
     }
 
     @Override

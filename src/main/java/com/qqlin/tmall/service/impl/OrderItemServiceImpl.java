@@ -69,13 +69,13 @@ public class OrderItemServiceImpl implements OrderItemService {
     @Override
     @Cacheable(key = "'orderItems-one-'+ #p0")
     public OrderItem get(int id) {
-        return orderItemDAO.findOne(id);
+        return orderItemDAO.findById(id).orElse(null);
     }
 
     @Override
     @CacheEvict(allEntries = true)
     public void delete(int id) {
-        orderItemDAO.delete(id);
+        orderItemDAO.deleteById(id);
     }
 
 

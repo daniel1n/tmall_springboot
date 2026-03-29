@@ -40,13 +40,13 @@ public class PropertyServiceImpl implements PropertyService {
     @Override
     @CacheEvict(allEntries = true)
     public void delete(int id) {
-        propertyDAO.delete(id);
+        propertyDAO.deleteById(id);
     }
 
     @Override
     @Cacheable(key = "'properties-one-'+ #p0")
     public Property get(int id) {
-        return propertyDAO.findOne(id);
+        return propertyDAO.findById(id).orElse(null);
     }
 
     @Override
@@ -60,8 +60,8 @@ public class PropertyServiceImpl implements PropertyService {
     public Page4Navigator<Property> list(int cid, int start, int size, int navigatePages) {
         Category category = categoryService.get(cid);
 
-        Sort sort = new Sort(Sort.Direction.DESC, "id");
-        Pageable pageable = new PageRequest(start, size, sort);
+        Sort sort = Sort.by(Sort.Direction.DESC, "id");
+        Pageable pageable = PageRequest.of(start, size, sort);
 
         Page<Property> pageFromJPA = propertyDAO.findByCategory(category, pageable);
         return new Page4Navigator<>(pageFromJPA, navigatePages);

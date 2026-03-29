@@ -31,8 +31,8 @@ public class CategoryServiceImpl implements CategoryService {
     @Override
     @Cacheable(key = "'categories-page-' + #p0 + '-' + #p1")
     public Page4Navigator list(int start, int size, int navigatePages) {
-        Sort sort = new Sort(Sort.Direction.DESC, "id");
-        Pageable pageable = new PageRequest(start, size, sort);
+        Sort sort = Sort.by(Sort.Direction.DESC, "id");
+        Pageable pageable = PageRequest.of(start, size, sort);
         Page<Category> pageFromJpa = categoryDAO.findAll(pageable);
 
         return new Page4Navigator<>(pageFromJpa, navigatePages);
@@ -41,7 +41,7 @@ public class CategoryServiceImpl implements CategoryService {
     @Override
     @Cacheable(key = "'categories-all'")
     public List<Category> list() {
-        Sort sort = new Sort(Sort.Direction.DESC, "id");
+        Sort sort = Sort.by(Sort.Direction.DESC, "id");
         return categoryDAO.findAll(sort);
     }
 
@@ -54,13 +54,13 @@ public class CategoryServiceImpl implements CategoryService {
     @Override
     @CacheEvict(allEntries = true)
     public void delete(int id) {
-        categoryDAO.delete(id);
+        categoryDAO.deleteById(id);
     }
 
     @Override
     @Cacheable(key = "'categiries-one-' + #p0")
     public Category get(int id) {
-        return categoryDAO.findOne(id);
+        return categoryDAO.findById(id).orElse(null);
     }
 
     @Override

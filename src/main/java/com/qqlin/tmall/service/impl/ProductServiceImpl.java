@@ -8,8 +8,6 @@ import com.qqlin.tmall.service.*;
 import com.qqlin.tmall.util.Page4Navigator;
 import com.qqlin.tmall.util.SpringContextUtil;
 import org.elasticsearch.index.query.QueryBuilders;
-import org.elasticsearch.index.query.functionscore.FunctionScoreQueryBuilder;
-import org.elasticsearch.index.query.functionscore.ScoreFunctionBuilders;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.CacheEvict;
@@ -18,12 +16,16 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.data.elasticsearch.core.ElasticsearchOperations;
+import org.springframework.data.elasticsearch.core.SearchHit;
+import org.springframework.data.elasticsearch.core.SearchHits;
 import org.springframework.data.elasticsearch.core.query.NativeSearchQueryBuilder;
-import org.springframework.data.elasticsearch.core.query.SearchQuery;
+import org.springframework.data.elasticsearch.core.query.Query;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @author qqlin
@@ -45,6 +47,8 @@ public class ProductServiceImpl implements ProductService {
     private ReviewService reviewService;
     @Autowired
     private ProductElasticSearchDAO productElasticSearchDAO;
+    @Autowired
+    private ElasticsearchOperations elasticsearchOperations;
 
     @Override
     @CacheEvict(allEntries = true)
@@ -56,14 +60,14 @@ public class ProductServiceImpl implements ProductService {
     @Override
     @CacheEvict(allEntries = true)
     public void delete(int id) {
-        productDAO.delete(id);
-        productElasticSearchDAO.delete(id);
+        productDAO.deleteById(id);
+        productElasticSearchDAO.deleteById(id);
     }
 
     @Override
     @Cacheable(key = "'products-one-'+ #p0")
     public Product get(int id) {
-        return productDAO.findOne(id);
+        return productDAO.findById(id).orElse(null);
     }
 
     @Override
@@ -77,8 +81,8 @@ public class ProductServiceImpl implements ProductService {
     @Cacheable(key = "'products-cid-'+#p0+'-page-'+#p1 + '-' + #p2 ")
     public Page4Navigator<Product> list(int cid, int start, int size, int navigatePages) {
         Category category = categoryService.get(cid);
-        Sort sort = new Sort(Sort.Direction.DESC, "id");
-        Pageable pageable = new PageRequest(start, size, sort);
+        Sort sort = Sort.by(Sort.Direction.DESC, "id");
+        Pageable pageable = PageRequest.of(start, size, sort);
         Page<Product> pageFromJPA = productDAO.findByCategory(category, pageable);
         return new Page4Navigator<>(pageFromJPA, navigatePages);
     }
@@ -152,41 +156,35 @@ public class ProductServiceImpl implements ProductService {
 
     /*@Override
     public List<Product> search(String keyword, int start, int size) {
-        Sort sort = new Sort(Sort.Direction.DESC, "id");
-        Pageable pageable = new PageRequest(start, size, sort);
+        Sort sort = Sort.by(Sort.Direction.DESC, "id");
+        Pageable pageable = PageRequest.of(start, size, sort);
         List<Product> products = productDAO.findByNameLike("%" + keyword + "%", pageable);
         return products;
     }*/
 
     @Override
     public void initDatabase2ES() {
-        Pageable pageable = new PageRequest(0, 5);
+        Pageable pageable = PageRequest.of(0, 5);
         Page<Product> page = productElasticSearchDAO.findAll(pageable);
         if (page.getContent().isEmpty()) {
             List<Product> products = productDAO.findAll();
-            productElasticSearchDAO.save(products);
+            productElasticSearchDAO.saveAll(products);
         }
     }
 
     @Override
     public List<Product> search(String keyword, int start, int size) {
         initDatabase2ES();
-        FunctionScoreQueryBuilder functionScoreQueryBuilder = QueryBuilders.functionScoreQuery()
-                // 关键字查询
-                .add(QueryBuilders.matchPhrasePrefixQuery("name", keyword),
-                        ScoreFunctionBuilders.weightFactorFunction(100))
-                // 设置权重分 求和模式
-                .scoreMode("sum")
-                // 设置权重分最低分
-                .setMinScore(10);
-        // 设置分页
-        Sort sort = new Sort(Sort.Direction.DESC, "id");
-        Pageable pageable = new PageRequest(start, size, sort);
-        SearchQuery searchQuery = new NativeSearchQueryBuilder()
+        Sort sort = Sort.by(Sort.Direction.DESC, "id");
+        Pageable pageable = PageRequest.of(start, size, sort);
+        Query query = new NativeSearchQueryBuilder()
                 .withPageable(pageable)
-                .withQuery(functionScoreQueryBuilder).build();
+                .withQuery(QueryBuilders.matchPhrasePrefixQuery("name", keyword))
+                .build();
 
-        Page<Product> page = productElasticSearchDAO.search(searchQuery);
-        return page.getContent();
+        SearchHits<Product> searchHits = elasticsearchOperations.search(query, Product.class);
+        return searchHits.stream()
+                .map(SearchHit::getContent)
+                .collect(Collectors.toList());
     }
 }

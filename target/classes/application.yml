@@ -1,17 +1,18 @@
 server:
-  context-path: /tmall_springboot
+  servlet:
+    context-path: /tmall_springboot
   port: 8080
 
 spring:
   #database
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/tmall_springboot?characterEncoding=UTF-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/tmall_springboot?characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&useSSL=false
     username: root
     password: admin
 
   #设置上传文件大小，默认只有1 m
-  http:
+  servlet:
     multipart:
       maxFileSize: 100Mb
       maxRequestSize: 100Mb
@@ -28,7 +29,6 @@ spring:
   #设置thymeleaf
   thymeleaf:
     cache: false
-    content-type: text/html
     encoding: UTF-8
     mode: LEGACYHTML5
 
@@ -42,15 +42,16 @@ spring:
     port: 6379
     #Redis服务器连接密码（默认为空）
     password:
-    pool:
-      #连接池最大连接数（使用负值表示没有限制）
-      max-active: 10
-      #连接池中的最大空闲连接
-      max-idle: 8
-      #连接池最大阻塞等待时间（使用负值表示没有限制）
-      max-wait: -1
-      #连接池中的最小空闲连接
-      min-idle: 0
+    lettuce:
+      pool:
+        #连接池最大连接数（使用负值表示没有限制）
+        max-active: 10
+        #连接池中的最大空闲连接
+        max-idle: 8
+        #连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-wait: -1
+        #连接池中的最小空闲连接
+        min-idle: 0
     #连接超时时间（毫秒）
     timeout: 0
 
