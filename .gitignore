@@ -1,0 +1,7 @@
+# Local IDE config / agent settings
+.claude/
+.vscode/
+*.iml
+
+# Build output
+target/
