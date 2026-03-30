@@ -3,7 +3,6 @@ package com.qqlin.tmall.service.impl;
 import com.qqlin.tmall.dao.entity.Product;
 import com.qqlin.tmall.dao.entity.Review;
 import com.qqlin.tmall.dao.repository.ReviewDAO;
-import com.qqlin.tmall.service.ProductService;
 import com.qqlin.tmall.service.ReviewService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheConfig;
@@ -23,8 +22,6 @@ public class ReviewServiceImpl implements ReviewService {
 
     @Autowired
     private ReviewDAO reviewDAO;
-    @Autowired
-    private ProductService productService;
 
     @Override
     @CacheEvict(allEntries = true)

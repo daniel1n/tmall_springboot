@@ -5,7 +5,6 @@ import com.qqlin.tmall.dao.entity.Product;
 import com.qqlin.tmall.dao.entity.ProductImage;
 import com.qqlin.tmall.dao.repository.ProductImageDAO;
 import com.qqlin.tmall.service.ProductImageService;
-import com.qqlin.tmall.service.ProductService;
 import com.qqlin.tmall.util.SpringContextUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheConfig;
@@ -25,8 +24,6 @@ public class ProductImageServiceImpl implements ProductImageService {
 
     @Autowired
     private ProductImageDAO productImageDAO;
-    @Autowired
-    private ProductService productService;
 
     @Override
     @CacheEvict(allEntries = true)

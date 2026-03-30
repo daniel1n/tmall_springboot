@@ -1,6 +1,8 @@
 # Local IDE config / agent settings
 .claude/
 .vscode/
+.m2/
+.idea/
 *.iml
 
 # Build output

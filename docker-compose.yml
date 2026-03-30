@@ -1,4 +1,4 @@
-# Intel x86_64 — MySQL 5.7 + Redis + Elasticsearch 2.4（Transport 9300，匹配 Spring Boot 1.5 客户端）
+# Intel x86_64 — MySQL 5.7 + Redis + Elasticsearch 7.17（HTTP 9200 / Transport 9300）
 # 用法：在项目根目录执行 docker compose up -d
 # 应用访问：127.0.0.1:3306 / 6379 / 9300，与 src/main/resources/application.yml 一致
 version: "3.8"
@@ -25,13 +25,16 @@ services:
       - "6379:6379"
 
   elasticsearch:
-    image: elasticsearch:2.4.6
+    image: elasticsearch:7.17.15
     container_name: tmall-elasticsearch
     restart: unless-stopped
     ports:
       - "9200:9200"
       - "9300:9300"
     environment:
+      discovery.type: single-node
+      xpack.security.enabled: "false"
+      xpack.security.transport.ssl.enabled: "false"
       ES_JAVA_OPTS: "-Xms512m -Xmx512m"
 
 volumes:
