@@ -7,8 +7,12 @@ import org.apache.shiro.spring.LifecycleBeanPostProcessor;
 import org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
+import org.apache.shiro.web.filter.authc.AnonymousFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 /**
  * Shiro的配置
@@ -28,6 +32,33 @@ public class ShiroConfiguration {
     public ShiroFilterFactoryBean shirFilter(SecurityManager securityManager) {
         ShiroFilterFactoryBean shiroFilterFactoryBean = new ShiroFilterFactoryBean();
         shiroFilterFactoryBean.setSecurityManager(securityManager);
+
+        // Filter chains - order matters!
+        Map<String, String> filterChainDefinitionMap = new LinkedHashMap<>();
+
+        // Static resources - allow anonymous
+        filterChainDefinitionMap.put("/css/**", "anon");
+        filterChainDefinitionMap.put("/js/**", "anon");
+        filterChainDefinitionMap.put("/img/**", "anon");
+        filterChainDefinitionMap.put("/img/category/**", "anon");
+        filterChainDefinitionMap.put("/img/productSingle/**", "anon");
+        filterChainDefinitionMap.put("/img/productDetail/**", "anon");
+
+        // API endpoints - allow anonymous access
+        filterChainDefinitionMap.put("/api/**", "anon");
+
+        // Admin API requires authentication
+        filterChainDefinitionMap.put("/admin/**", "authc, roles[admin]");
+
+        // All other paths - require authentication
+        filterChainDefinitionMap.put("/**", "authc");
+
+        shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
+
+        // Login URL for unauthorized access
+        shiroFilterFactoryBean.setLoginUrl("/login");
+        shiroFilterFactoryBean.setUnauthorizedUrl("/unauthorized");
+
         return shiroFilterFactoryBean;
     }
 

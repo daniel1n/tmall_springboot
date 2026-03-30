@@ -17,12 +17,12 @@ services:
   #     - ./SQL/tmall_springboot.sql:/docker-entrypoint-initdb.d/01-tmall_springboot.sql:ro
   #   command: --character-set-server=utf8 --collation-server=utf8_general_ci
 
-  redis:
-    image: redis:7-alpine
-    container_name: tmall-redis
-    restart: unless-stopped
-    ports:
-      - "6379:6379"
+  # redis:
+  #   image: redis:7-alpine
+  #   container_name: tmall-redis
+  #   restart: unless-stopped
+  #   ports:
+  #     - "6379:6379"
 
   elasticsearch:
     image: elasticsearch:7.17.15

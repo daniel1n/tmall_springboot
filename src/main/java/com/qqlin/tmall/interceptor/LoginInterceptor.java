@@ -43,7 +43,18 @@ public class LoginInterceptor implements HandlerInterceptor {
                 "foreorderConfirmed",
                 "foredeleteOrder",
                 "forereview",
-                "foredoreview"
+                "foredoreview",
+
+                // API paths (new frontend-backend separation)
+                "api/fore/buy",
+                "api/fore/alipayPage",
+                "api/fore/payed",
+                "api/fore/cart",
+                "api/fore/bought",
+                "api/fore/confirmPay",
+                "api/fore/orderConfirmed",
+                "api/fore/checkLogin",
+                "api/fore/userInfo"
         };
 
         String uri = httpServletRequest.getRequestURI();
@@ -59,7 +70,14 @@ public class LoginInterceptor implements HandlerInterceptor {
 
             if (!subject.isAuthenticated()) {
 //            if (user == null) {
-                httpServletResponse.sendRedirect("login");
+                // For API paths, return 401 with JSON response
+                if (page.startsWith("api/")) {
+                    httpServletResponse.setStatus(401);
+                    httpServletResponse.setContentType("application/json;charset=UTF-8");
+                    httpServletResponse.getWriter().write("{\"success\":false,\"message\":\"未登录\"}");
+                } else {
+                    httpServletResponse.sendRedirect("login");
+                }
                 return false;
             }
         }
