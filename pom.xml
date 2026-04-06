@@ -14,6 +14,12 @@
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.7.18</version>
     </parent>
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+        </repository>
+    </repositories>
     <dependencies>
 
         <dependency>
@@ -97,11 +103,11 @@
             <version>8.0.33</version>
         </dependency>
 
-        <!-- commons-lang -->
+        <!-- commons-lang3 -->
         <dependency>
-            <groupId>commons-lang</groupId>
-            <artifactId>commons-lang</artifactId>
-            <version>2.6</version>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.17.0</version>
         </dependency>
         <!-- shiro -->
         <dependency>

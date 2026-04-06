@@ -4,7 +4,7 @@ import com.qqlin.tmall.comparator.*;
 import com.qqlin.tmall.dao.entity.*;
 import com.qqlin.tmall.service.*;
 import com.qqlin.tmall.util.Result;
-import org.apache.commons.lang.math.RandomUtils;
+import java.util.Random;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.UsernamePasswordToken;
@@ -395,7 +395,7 @@ public class ForeRestController {
             return Result.fail("未登录");
         }
 
-        String orderCode = new SimpleDateFormat("yyyyMMddHHmmssSSS").format(new Date()) + RandomUtils.nextInt(10000);
+        String orderCode = new SimpleDateFormat("yyyyMMddHHmmssSSS").format(new Date()) + new Random().nextInt(10000);
         order.setOrderCode(orderCode);
         order.setCreateDate(new Date());
         order.setUser(user);
